@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+	@@include('html/_head.htm',{ "title":"Главная" })
+	<body>
+		<div class="wrapper">
+			<!-- HEADER -->
+			<header class="header">
+				<div class="header__top top-header">
+					<div class="top-header__container">
+						<a href="#" class="top-header__logo">
+							<img src="@img/header/YourTour.png" alt="logo" />
+						</a>
+						<nav class="top-header__menu menu-top-header">
+							<ul class="menu-top-header__list">
+								<li class="menu-top-header__item">
+									<a href="" class="menu-top-header__link">Туры</a>
+								</li>
+								<li class="menu-top-header__item">
+									<a href="" class="menu-top-header__link">Создать тур</a>
+								</li>
+								<li class="menu-top-header__item">
+									<a href="" class="menu-top-header__link">Отзывы</a>
+								</li>
+								<li class="menu-top-header__item">
+									<a href="" class="menu-top-header__link">Истории</a>
+								</li>
+							</ul>
+						</nav>
+						<a href="tel:79999999999" class="top-header__contacts">+7 999 999 99 99</a>
+					</div>
+				</div>
+				<div class="header__body body-header">
+					<div class="body-header__container">
+						<h1 class="body-header__title h1">Идеальные путешествия существуют</h1>
+						<p class="body-header__text p-normal">
+							Идейные соображения высшего порядка, а также рамки и <br />
+							место обучения кадров
+						</p>
+						<button class="body-header__btn btn_header">Найти тур</button>
+					</div>
+				</div>
+			</header>
+			<!-- MAIN -->
+			<main class="main">
+				<!-- CHOOSE TOUR BLOCK -->
+				<div class="main__choose-tour tour-choose">
+					<div class="main__container">
+						<div class="main__header header-main">
+							<h2 class="header-main__title h2">Выбери свой тур</h2>
+							<nav class="header-main__menu">
+								<ul class="header-main__list">
+									<li class="header-main__title">
+										<a href="" class="header-main__link _active-link">Популярные</a>
+									</li>
+									<li class="header-main__title">
+										<a href="" class="header-main__link">Авторские</a>
+									</li>
+									<li class="header-main__title">
+										<a href="" class="header-main__link">Походы</a>
+									</li>
+									<li class="header-main__title">
+										<a href="" class="header-main__link">Сплавы</a>
+									</li>
+									<li class="header-main__title">
+										<a href="" class="header-main__link">Велопрогулки</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="tour-choose__items">
+							<div class="tour-choose__card card-choose card-choose_1">
+								<div class="card-choose__inner">
+									<h3 class="card-choose__title h3">
+										Путешествие <br />
+										в горы
+									</h3>
+									<p class="card-choose__price p-small">от 80 000 руб.</p>
+									<a href="" class="card-choose__link more-link">Подробнее</a>
+								</div>
+							</div>
+							<div class="tour-choose__card card-choose card-choose_2">
+								<div class="card-choose__inner">
+									<h3 class="card-choose__title h3">
+										Путешествие <br />
+										в горы
+									</h3>
+									<p class="card-choose__price p-small">от 80 000 руб.</p>
+									<a href="" class="card-choose__link more-link">Подробнее</a>
+								</div>
+							</div>
+							<div class="tour-choose__card card-choose card-choose_3">
+								<div class="card-choose__inner">
+									<h3 class="card-choose__title h3">
+										Путешествие <br />
+										в горы
+									</h3>
+									<p class="card-choose__price p-small">от 80 000 руб.</p>
+									<a href="" class="card-choose__link more-link">Подробнее</a>
+								</div>
+							</div>
+							<div class="tour-choose__card card-choose card-choose_4">
+								<div class="card-choose__inner">
+									<h3 class="card-choose__title h3">
+										Путешествие <br />
+										в горы
+									</h3>
+									<p class="card-choose__price p-small">от 80 000 руб.</p>
+									<a href="" class="card-choose__link more-link">Подробнее</a>
+								</div>
+							</div>
+							<div class="tour-choose__card card-choose card-choose_5">
+								<div class="card-choose__inner">
+									<h3 class="card-choose__title h3">
+										Путешествие <br />
+										в горы
+									</h3>
+									<p class="card-choose__price p-small">от 80 000 руб.</p>
+									<a href="" class="card-choose__link more-link">Подробнее</a>
+								</div>
+							</div>
+							<div class="tour-choose__card card-choose card-choose_6">
+								<div class="card-choose__inner">
+									<h3 class="card-choose__title h3">
+										Путешествие <br />
+										в горы
+									</h3>
+									<p class="card-choose__price p-small">от 80 000 руб.</p>
+									<a href="" class="card-choose__link more-link">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- CREATE TOUR BLOCK -->
+				<div class="main__create-tour tour-create">
+					<div class="main__container">
+						<div class="main__header header-main">
+							<h2 class="header-main__title h2">Собери свой тур</h2>
+							<p class="header-main__text p-normal">Идейные соображения высшего порядка,<br />а также рамки и место обучения кадров</p>
+						</div>
+						<form action="" class="form">
+							<div class="form__body">
+								<div class="form__group">
+									<label for="name" class="form__label">Имя</label>
+									<input type="text" id="name" name="name" class="form__input" placeholder="Введите ваше имя" />
+								</div>
+								<div class="form__group">
+									<label for="direction" class="form__label">Направление</label>
+									<select id="direction" name="direction" class="form__select" placeholder="Куда хотите ехать">
+										<option value="1">Пункт №1</option>
+										<option value="2">Пункт №2</option>
+										<option value="3">Пункт №3</option>
+										<option value="4">Пункт №4</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label for="email" class="form__label">Email</label>
+									<input type="email" id="email" name="email" class="form__input" placeholder="example@mail.com" />
+								</div>
+								<div class="form-group">
+									<label for="phone" class="form__label">Телефон</label>
+									<input type="tel" id="phone" name="phone" class="form__input" placeholder="+7(_ _ _)_ _ _-_ _-_ _" />
+								</div>
+								<div class="form-group">
+									<label for="date_from" class="form__label">Дата от</label>
+									<input type="date" id="date_from" name="date_from" class="form__input" />
+								</div>
+								<div class="form-group">
+									<label for="date_to" class="form__label">Дата до</label>
+									<input type="date" id="date_to" name="date_to" class="form__input" />
+								</div>
+								<div class="form-group">
+									<label for="text" class="form__label">Комментарий</label>
+									<textarea name="text" id="text" cols="30" rows="10"></textarea>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
+</html>

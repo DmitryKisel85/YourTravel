@@ -1,0 +1,84 @@
+// Заголовки, общие БЄМ блоки и проче...
+.h1 {
+	text-align: center;
+	font-weight: 700;
+	font-size: 96px;
+	line-height: 109%;
+	letter-spacing: 0.02em;
+	color: $white-clr;
+}
+
+.h2 {
+	font-weight: 700;
+	font-size: 59px;
+	line-height: 124%;
+}
+
+.h3 {
+	font-weight: 500;
+	font-size: 35px;
+	line-height: 122%;
+	color: $white-clr;
+}
+//========================================================================================================================================================
+
+.p-big {
+	font-weight: 700;
+	font-size: 23px;
+	line-height: 122%;
+}
+
+.p-normal {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 142%;
+	text-align: center;
+}
+
+.p-small {
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 142%;
+	letter-spacing: -0.01em;
+	color: $white-clr;
+}
+//========================================================================================================================================================
+// BUTTONS
+
+.btn {
+	&_header {
+		padding: 5px 20px;
+		border-radius: 10px;
+		font-size: 17px;
+		line-height: 142%;
+		letter-spacing: -0.01em;
+		color: $mainColor;
+		background-color: $white-clr;
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			color: $white-clr;
+			background-color: $orange-200;
+		}
+
+		&:active {
+			color: $mainColor;
+			background-color: $orange-100;
+		}
+	}
+}
+
+//========================================================================================================================================================
+.more-link {
+	font-weight: 700;
+	font-size: 23px;
+	line-height: 122%;
+	color: $white-clr;
+	&::after {
+		content: "\e900";
+		@extend %ic;
+		margin-left: 17px;
+	}
+}
+
+//

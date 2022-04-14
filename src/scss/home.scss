@@ -1,0 +1,147 @@
+//====================================================================================================
+// CHOOSE TOUR BLOCK
+
+.main {
+	// .main__choose-tour
+	&__choose-tour {
+	}
+
+	// .main__container
+	&__container {
+	}
+
+	// .main__header
+	&__header {
+	}
+}
+
+//========================================================================================================================================================
+// CHOOSE TOUR BLOCK
+
+.tour-choose {
+	// .tour-choose__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+	}
+
+	// .tour-choose__card
+	&__card {
+	}
+}
+.header-main {
+	padding: 135px 0 65px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	//.header-main__text
+	&__text {
+		color: $gray-300;
+	}
+
+	// .header-main__title
+	&__title {
+		margin-bottom: 35px;
+	}
+
+	// .header-main__menu
+	&__menu {
+	}
+
+	// .header-main__list
+	&__list {
+		display: flex;
+		justify-content: center;
+		gap: 30px;
+	}
+
+	// .header-main__link
+	&__link {
+		font-weight: 700;
+		font-size: 23px;
+		line-height: 122%;
+
+		@media (any-hover: hover) {
+			&:hover {
+				&::after {
+					content: "";
+					display: block;
+					margin-top: 3px;
+					border-bottom: 2px solid $mainColor;
+					width: 100%;
+				}
+			}
+		}
+
+		&._active-link {
+			color: $orange-200;
+
+			&::after {
+				content: "";
+				display: block;
+				margin-top: 3px;
+				border-bottom: 2px solid $orange-200;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.card-choose {
+	border-radius: 50px;
+	height: 531px;
+	transform: scale(1);
+	transition: transform 0.3s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			transform: scale(1.2);
+			z-index: 2;
+		}
+	}
+
+	&__inner {
+		padding: 50px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+
+	// .card-choose__title
+	&__title {
+		margin-bottom: 19px;
+	}
+
+	// .card-choose__price
+	&__price {
+		flex: 1;
+	}
+
+	// .card-choose__link
+	&__link {
+		margin-bottom: -2px;
+	}
+
+	&_1 {
+		background: $card-gradient, url("@img/choose-tour/card-1.jpg") bottom / cover no-repeat;
+	}
+	&_2 {
+		background: $card-gradient, url("@img/choose-tour/card-2.jpg") bottom / cover no-repeat;
+	}
+	&_3 {
+		background: $card-gradient, url("@img/choose-tour/card-3.jpg") bottom / cover no-repeat;
+	}
+	&_4 {
+		background: $card-gradient, url("@img/choose-tour/card-4.jpg") bottom / cover no-repeat;
+	}
+	&_5 {
+		background: $card-gradient, url("@img/choose-tour/card-5.jpg") bottom / cover no-repeat;
+	}
+	&_6 {
+		background: $card-gradient, url("@img/choose-tour/card-6.jpg") bottom / cover no-repeat;
+	}
+}
+
+//====================================================================================================
