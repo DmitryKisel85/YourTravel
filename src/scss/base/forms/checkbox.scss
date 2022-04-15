@@ -10,10 +10,11 @@
 		height: 0;
 		opacity: 0;
 		&:focus + .checkbox__label:before {
-			box-shadow: 0 0 5px #000;
+			// box-shadow: 0 0 5px #000;
 		}
 		&:checked + .checkbox__label:before {
-			background: #000;
+			content: "";
+			background: url("@img/check.svg") center no-repeat;
 		}
 	}
 	// .checkbox__label
@@ -22,17 +23,25 @@
 		display: inline-flex;
 		align-items: center;
 		position: relative;
-		gap: 10px;
+		gap: 19px;
+
 		&:before {
 			content: "";
 			align-self: flex-start;
-			flex: 0 0 20px;
-			width: 20px;
-			height: 20px;
-			border: 1px solid #a7a9ac;
+			flex: 0 0 26px;
+			width: 26px;
+			height: 26px;
+			border-radius: 5px;
+			border: 1px solid $mainColor;
 		}
 	}
 	// .checkbox__text
 	&__text {
+		@extend .p-small;
+		color: $gray-300;
+
+		span {
+			color: $mainColor;
+		}
 	}
 }

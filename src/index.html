@@ -43,26 +43,26 @@
 			<!-- MAIN -->
 			<main class="main">
 				<!-- CHOOSE TOUR BLOCK -->
-				<div class="main__choose-tour tour-choose">
+				<div class="main__block tour-choose">
 					<div class="main__container">
-						<div class="main__header header-main">
-							<h2 class="header-main__title h2">Выбери свой тур</h2>
-							<nav class="header-main__menu">
-								<ul class="header-main__list">
-									<li class="header-main__title">
-										<a href="" class="header-main__link _active-link">Популярные</a>
+						<div class="main__header main-block-header">
+							<h2 class="main-block-header__title h2">Выбери свой тур</h2>
+							<nav class="main-block-header__menu main-block-menu">
+								<ul class="main-block-menu__list">
+									<li class="main-block-menu__item">
+										<a href="" class="main-block-menu__link p-big _active-link">Популярные</a>
 									</li>
-									<li class="header-main__title">
-										<a href="" class="header-main__link">Авторские</a>
+									<li class="main-block-menu__item">
+										<a href="" class="main-block-menu__link p-big">Авторские</a>
 									</li>
-									<li class="header-main__title">
-										<a href="" class="header-main__link">Походы</a>
+									<li class="main-block-menu__item">
+										<a href="" class="main-block-menu__link p-big">Походы</a>
 									</li>
-									<li class="header-main__title">
-										<a href="" class="header-main__link">Сплавы</a>
+									<li class="main-block-menu__item">
+										<a href="" class="main-block-menu__link p-big">Сплавы</a>
 									</li>
-									<li class="header-main__title">
-										<a href="" class="header-main__link">Велопрогулки</a>
+									<li class="main-block-menu__item">
+										<a href="" class="main-block-menu__link p-big">Велопрогулки</a>
 									</li>
 								</ul>
 							</nav>
@@ -132,20 +132,22 @@
 					</div>
 				</div>
 				<!-- CREATE TOUR BLOCK -->
-				<div class="main__create-tour tour-create">
+				<div class="main__block tour-create">
 					<div class="main__container">
-						<div class="main__header header-main">
-							<h2 class="header-main__title h2">Собери свой тур</h2>
+						<div class="main__header main-block-header">
+							<h2 class="main-block-header__title h2">Собери свой тур</h2>
 							<p class="header-main__text p-normal">Идейные соображения высшего порядка,<br />а также рамки и место обучения кадров</p>
 						</div>
+
 						<form action="" class="form">
 							<div class="form__body">
 								<div class="form__group">
 									<label for="name" class="form__label">Имя</label>
-									<input type="text" id="name" name="name" class="form__input" placeholder="Введите ваше имя" />
+									<input type="text" id="name" name="name" class="form__input input" placeholder="Введите Ваше имя" />
 								</div>
 								<div class="form__group">
 									<label for="direction" class="form__label">Направление</label>
+
 									<select id="direction" name="direction" class="form__select" placeholder="Куда хотите ехать">
 										<option value="1">Пункт №1</option>
 										<option value="2">Пункт №2</option>
@@ -153,28 +155,97 @@
 										<option value="4">Пункт №4</option>
 									</select>
 								</div>
-								<div class="form-group">
-									<label for="email" class="form__label">Email</label>
+								<div class="form__group">
+									<label for="email" class="form__label p-normal">Email</label>
 									<input type="email" id="email" name="email" class="form__input" placeholder="example@mail.com" />
 								</div>
-								<div class="form-group">
-									<label for="phone" class="form__label">Телефон</label>
-									<input type="tel" id="phone" name="phone" class="form__input" placeholder="+7(_ _ _)_ _ _-_ _-_ _" />
+								<div class="form__group">
+									<label for="phone" class="form__label p-normal">Телефон</label>
+									<input type="tel" id="phone" name="phone" class="form__input" placeholder="+7( _ _ _ ) _ _ _ - _ _ - _ _" />
 								</div>
-								<div class="form-group">
-									<label for="date_from" class="form__label">Дата от</label>
-									<input type="date" id="date_from" name="date_from" class="form__input" />
+								<div class="form__group">
+									<label for="date_from" class="form__label p-normal">Дата от</label>
+									<input type="date" id="date_from" name="date_from" class="form__input" data-placeholder="ДД.ММ.ГГГГ" />
 								</div>
-								<div class="form-group">
-									<label for="date_to" class="form__label">Дата до</label>
-									<input type="date" id="date_to" name="date_to" class="form__input" />
+								<div class="form__group">
+									<label for="date_to" class="form__label p-normal">Дата до</label>
+									<input type="date" id="date_to" name="date_to" class="form__input" data-placeholder="ДД.ММ.ГГГГ" />
 								</div>
-								<div class="form-group">
-									<label for="text" class="form__label">Комментарий</label>
-									<textarea name="text" id="text" cols="30" rows="10"></textarea>
+								<div class="form__group span_all">
+									<label for="text" class="form__label p-normal">Комментарий</label>
+									<textarea class="form__textarea" name="text" id="text"></textarea>
+								</div>
+								<div class="form__bottom-block span_all">
+									<div class="form__radio radio-form">
+										<p class="radio-form__text p-normal">Вам есть 18 лет?</p>
+										<div class="options">
+											<div class="options__item">
+												<input hidden id="o_1" class="options__input" checked type="radio" value="1" name="option" />
+												<label for="o_1" class="options__label"><span class="options__text p-normal">Да</span></label>
+											</div>
+											<div class="options__item">
+												<input hidden id="o_2" class="options__input" type="radio" value="2" name="option" />
+												<label for="o_2" class="options__label"><span class="options__text p-normal">Нет</span></label>
+											</div>
+										</div>
+									</div>
+
+									<div class="form__checkbox">
+										<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+										<label for="c_1" class="checkbox__label"
+											><span class="checkbox__text">Нажимая кнопку, я принимаю условия <span>Лицензионного договора</span> </span></label
+										>
+									</div>
+
+									<div class="form__btns">
+										<button type="submit" class="btn-form btn-form_submit">Найти тур</button>
+										<input autocomplete="off" type="reset" name="reset" placeholder="Сбросить" class="btn-form btn-form_reset" />
+									</div>
 								</div>
 							</div>
 						</form>
+					</div>
+				</div>
+				<!-- REVIEW BLOCK -->
+				<div class="main__block tour-review">
+					<div class="main__container">
+						<div class="main__header main-block-header">
+							<h2 class="main-block-header__title h2">
+								Отзывы наших <br />
+								путешественников
+							</h2>
+							<p class="header-main__text p-normal">Идейные соображения высшего порядка,<br />а также рамки и место обучения кадров</p>
+						</div>
+
+						<div class="tour-review__items">
+							<div class="tour-review__item">
+								<p class="tour-review__text p-big">
+									Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Идейные соображения высшего порядка, а также
+									начало повседневной работы по формированию позиции позволяет оценить значение модели развития.
+								</p>
+								<div class="tour-review__footer">
+									<div class="tour-review__description">
+										<div class="tour-review__name h3">Мария</div>
+										<p class="tour-review__tour p-small">Тур: Вдали от дома</p>
+									</div>
+									<img src="@img/review-tour/review-1.jpg" alt="client image" class="tour-review__image" />
+								</div>
+							</div>
+							<div class="tour-review__item">
+								<p class="tour-review__text p-big">
+									Равным образом постоянный количественный рост и сфера нашей активности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям. Значимость этих проблем настолько
+									очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Повседневная практика показывает, что реализация
+									намеченных плановых заданий в значительной степени обуславливает создание модели развития.
+								</p>
+								<div class="tour-review__footer">
+									<div class="tour-review__description">
+										<div class="tour-review__name h3">Павел</div>
+										<p class="tour-review__tour p-small">Тур:Путешествие в горы</p>
+									</div>
+									<img src="@img/review-tour/review-2.jpg" alt="client image" class="tour-review__image" />
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</main>

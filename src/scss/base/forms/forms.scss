@@ -1,19 +1,113 @@
 //<FORM>
 // Снипет (HTML):
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+input[type="date"]::before {
+	content: attr(data-placeholder);
+	width: 100%;
+	color: $gray-300;
+}
+
+textarea.input {
+	resize: none;
+	padding: 0px 0px;
+}
+
+.span_all {
+	grid-column: 1 / -1;
+}
+
 .form {
-	&__row {
+	&__body {
+		padding: 70px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 30px;
+		row-gap: 29px;
 	}
-	&__column {
+
+	&__group {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
 	}
-	&__line {
+
+	&__label {
+		@extend .p-normal;
 	}
-	&__input {
+
+	&__input,
+	&__select,
+	&__textarea {
+		&:focus {
+			border: 1px solid $gray-300;
+			outline: 1px solid $gray-300;
+		}
 	}
-	&__button {
+
+	&__input,
+	&__select {
+		display: block;
+		width: 100%;
+		height: 68px;
+		border-radius: 10px;
+		padding: 20px;
+		color: $mainColor;
+		background-color: $beige-100;
+		border: 1px solid $beige-200;
+
+		::placeholder {
+			@extend .p-normal;
+			color: $gray-300;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				cursor: pointer;
+			}
+		}
 	}
-	&__error {
+
+	&__textarea {
+		height: 152px;
+
+		padding: 20px;
+		color: $mainColor;
+		background-color: $beige-100;
+		border: 1px solid $beige-200;
+	}
+
+	&__bottom-block {
+	}
+
+	&__radio {
+		margin-bottom: 27px;
+	}
+
+	&__checkbox {
+		margin-bottom: 29px;
+	}
+
+	&__btns {
+		display: flex;
+		gap: 30px;
 	}
 }
+
+.radio-form {
+	&__text {
+		margin-bottom: 8px;
+	}
+}
+
 //</FORM>
 
 // <BUTTONS>
@@ -26,11 +120,11 @@
 
 // <CHECK>
 // Снипет (HTML): chk
-// @import "checkbox";
+@import "checkbox";
 
 // <RADIO>
 // Снипет (HTML): opt
-// @import "radio";
+@import "radio";
 
 // <SELECT>
 // Снипет (HTML): sel

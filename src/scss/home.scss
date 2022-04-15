@@ -1,9 +1,9 @@
 //====================================================================================================
-// CHOOSE TOUR BLOCK
+// MAIN BLOCK
 
 .main {
-	// .main__choose-tour
-	&__choose-tour {
+	&__block {
+		padding: 135px 0 0 0;
 	}
 
 	// .main__container
@@ -15,54 +15,36 @@
 	}
 }
 
-//========================================================================================================================================================
-// CHOOSE TOUR BLOCK
-
-.tour-choose {
-	// .tour-choose__items
-	&__items {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 30px;
-	}
-
-	// .tour-choose__card
-	&__card {
-	}
-}
-.header-main {
-	padding: 135px 0 65px 0;
+.main-block-header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-bottom: 100px;
 
-	//.header-main__text
-	&__text {
-		color: $gray-300;
-	}
-
-	// .header-main__title
+	// .main-block-header__title
 	&__title {
 		margin-bottom: 35px;
 	}
 
-	// .header-main__menu
+	// .main-block-header__menu
 	&__menu {
 	}
+}
 
-	// .header-main__list
+.main-block-menu {
+	// .main-block-menu__list
 	&__list {
 		display: flex;
 		justify-content: center;
 		gap: 30px;
 	}
 
-	// .header-main__link
-	&__link {
-		font-weight: 700;
-		font-size: 23px;
-		line-height: 122%;
+	// .main-block-menu__item
+	&__item {
+	}
 
+	// .main-block-menu__link
+	&__link {
 		@media (any-hover: hover) {
 			&:hover {
 				&::after {
@@ -86,6 +68,45 @@
 				width: 100%;
 			}
 		}
+	}
+}
+
+//========================================================================================================================================================
+// CHOOSE TOUR BLOCK
+
+.tour-choose {
+	// .tour-choose__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+	}
+
+	// .tour-choose__card
+	&__card {
+	}
+}
+.header-main {
+	//.header-main__text
+	&__text {
+		color: $gray-300;
+	}
+
+	// .header-main__title
+	&__item {
+		margin-bottom: 35px;
+	}
+
+	// .header-main__menu
+	&__menu {
+	}
+
+	// .header-main__list
+	&__list {
+	}
+
+	// .header-main__link
+	&__link {
 	}
 }
 
@@ -145,3 +166,58 @@
 }
 
 //====================================================================================================
+// REVIEW TOUR
+
+.tour-review {
+	// .tour-review__items
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 30px;
+	}
+
+	// .tour-review__item
+	&__item {
+		height: 673px;
+		padding: 40px;
+		display: flex;
+		flex-direction: column;
+		background-color: $beige-200;
+		border-radius: 50px;
+	}
+
+	// .tour-review__text
+	&__text {
+		flex: 1 1 auto;
+	}
+
+	// .tour-review__footer
+	&__footer {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .tour-review__description
+	&__description {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	// .tour-review__name
+	&__name {
+	}
+
+	// .tour-review__tour
+	&__tour {
+		color: $gray-300;
+	}
+
+	// .tour-review__image
+	&__image {
+		display: inline-block;
+		width: 75px;
+		height: 75px;
+		border-radius: 100px;
+	}
+}
