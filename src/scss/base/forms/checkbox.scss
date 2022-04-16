@@ -42,6 +42,16 @@
 
 		span {
 			color: $mainColor;
+
+			&:active {
+				color: $green-400;
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }

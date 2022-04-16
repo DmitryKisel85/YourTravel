@@ -74,26 +74,88 @@
 	&_submit {
 		color: $white-clr;
 		background-color: $green-400;
+		transition: all 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $green-300;
+			}
+		}
+
+		&:active {
+			background-color: $green-200;
+		}
 	}
 
 	&_reset {
 		color: $green-400;
 		background-color: $green-100;
+		transition: all 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $gray-100;
+			}
+		}
+
+		&:active {
+			background-color: $gray-200;
+		}
 	}
 }
 
 //========================================================================================================================================================
 .more-link {
-	font-weight: 700;
-	font-size: 23px;
-	line-height: 122%;
+	@extend .p-big;
+	display: inline-flex;
+	align-items: center;
+
+	border-radius: 50px;
 	color: $white-clr;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+
 	&::after {
 		content: "\e900";
 		@extend %ic;
-		margin-left: 17px;
+		position: relative;
+		display: inline-block;
+		margin-left: 15px;
+		top: 2px;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			padding: 7px 20px;
+			background-color: $green-400;
+		}
+
+		&:active {
+			background-color: $orange-200;
+		}
 	}
 }
 
 //
 //========================================================================================================================================================
+
+.social {
+	display: flex;
+	gap: 35px;
+
+	&__link {
+		transition: all 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&:active {
+			color: $orange-200;
+		}
+	}
+}

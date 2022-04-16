@@ -1,3 +1,36 @@
-//====================================================================================================
+.footer {
+	margin-top: 135px;
+	height: 88px;
+	background-color: $beige-200;
+	display: flex;
+	align-items: center;
 
-//====================================================================================================
+	&__container {
+		flex: 1 1 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	// .footer__text
+	&__text {
+		color: $gray-300;
+	}
+
+	// .footer__social
+	&__social {
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+
+		&::before {
+			@extend .p-normal;
+			position: relative;
+			display: inline-block;
+			margin-right: 10px;
+			color: $gray-300;
+		}
+	}
+}
