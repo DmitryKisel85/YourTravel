@@ -33,6 +33,11 @@ textarea.input {
 		grid-template-columns: 1fr 1fr;
 		column-gap: 30px;
 		row-gap: 29px;
+
+		@media (max-width: $tablet) {
+			padding: 60px;
+			column-gap: 20px;
+		}
 	}
 
 	&__group {

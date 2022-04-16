@@ -1,7 +1,11 @@
 //====================================================================================================
 .header {
-	height: rem(831);
+	height: 831px;
 	background: url("@img/header/header-img.jpg") center / cover no-repeat;
+
+	@media (max-width: $mobile) {
+		height: 488px;
+	}
 
 	// .header__top
 	&__top {
@@ -24,11 +28,14 @@
 	}
 	// .top-header__logo
 	&__logo {
+		@media (max-width: $mobile) {
+			width: 133px;
+			height: 22px;
+		}
 	}
 
 	// .top-header__menu
 	&__menu {
-		color: $white-clr;
 	}
 
 	// .top-header__contacts
@@ -36,10 +43,20 @@
 	}
 }
 .menu-top-header {
+	color: $white-clr;
+
+	@media (max-width: $mobile) {
+		display: none;
+	}
+
 	// .menu-top-header__list
 	&__list {
 		display: flex;
 		gap: 50px;
+
+		@media (max-width: $tablet) {
+			gap: 30px;
+		}
 	}
 
 	// .menu-top-header__item
@@ -59,19 +76,37 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+
+		@media (max-width: $mobile) {
+			padding: 52px 0;
+		}
 	}
 
 	// .body-header__title
 	&__title {
 		margin-bottom: 50px;
 		text-align: center;
+
+		@media (max-width: $mobile) {
+			margin-bottom: 40px;
+		}
 	}
 
 	// .body-header__text
 	&__text {
+		max-width: 562px;
 		margin-bottom: 50px;
 		color: $white-clr;
 		text-align: center;
+
+		@media (max-width: $tablet) {
+			max-width: 442px;
+		}
+
+		@media (max-width: $mobile) {
+			max-width: 310px;
+			margin-bottom: 40px;
+		}
 	}
 
 	// .body-header__btn

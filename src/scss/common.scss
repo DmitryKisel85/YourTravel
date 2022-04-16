@@ -6,8 +6,13 @@
 	font-size: 96px;
 	line-height: 109%;
 	letter-spacing: 0.02em;
-	text-align: center;
+
 	color: $white-clr;
+
+	@media (max-width: $mobile) {
+		font-size: 34px;
+		line-height: 112%;
+	}
 }
 
 .h2 {
@@ -15,34 +20,47 @@
 	font-size: 59px;
 	line-height: 124%;
 	text-align: center;
+
+	@media (max-width: $mobile) {
+		font-size: 34px;
+		line-height: 112%;
+		letter-spacing: 0.02em;
+	}
 }
 
 .h3 {
 	font-weight: 500;
 	font-size: 35px;
 	line-height: 122%;
+
+	@media (max-width: $mobile) {
+		font-weight: 700;
+		font-size: 23px;
+		line-height: 120%;
+		letter-spacing: 0.04em;
+	}
 }
 
-.m-h1 {
-	font-weight: 700;
-	font-size: 34px;
-	line-height: 112%;
-	letter-spacing: 0.02em;
-}
+// .m-h1 {
+// 	font-weight: 700;
+// 	font-size: 34px;
+// 	line-height: 112%;
+// 	letter-spacing: 0.02em;
+// }
 
-.m-h2 {
-	font-weight: 700;
-	font-size: 34px;
-	line-height: 112%;
-	letter-spacing: 0.02em;
-}
+// .m-h2 {
+// 	font-weight: 700;
+// 	font-size: 34px;
+// 	line-height: 112%;
+// 	letter-spacing: 0.02em;
+// }
 
-.m-h3 {
-	font-weight: 700;
-	font-size: 23px;
-	line-height: 120%;
-	letter-spacing: 0.04em;
-}
+// .m-h3 {
+// 	font-weight: 700;
+// 	font-size: 23px;
+// 	line-height: 120%;
+// 	letter-spacing: 0.04em;
+// }
 
 //========================================================================================================================================================
 
@@ -50,12 +68,21 @@
 	font-weight: 700;
 	font-size: 23px;
 	line-height: 122%;
+
+	@media (max-width: $mobile) {
+		font-size: 16px;
+		line-height: 142%;
+	}
 }
 
 .p-normal {
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 142%;
+
+	@media (max-width: $mobile) {
+		font-size: 16px;
+	}
 }
 
 .p-small {
@@ -63,25 +90,30 @@
 	font-size: 17px;
 	line-height: 142%;
 	letter-spacing: -0.01em;
+
+	@media (max-width: $mobile) {
+		font-size: 16px;
+	}
 }
 
-.m-p-big {
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 142%;
-}
+// .m-p-big {
+// 	font-weight: 700;
+// 	font-size: 16px;
+// 	line-height: 142%;
+// }
 
-.m-p-normal {
-	font-weight: 500;
-	font-size: 35px;
-	line-height: 122%;
-}
+// .m-p-normal {
+// 	font-weight: 400;
+// 	font-size: 16px;
+// 	line-height: 142%;
+// }
 
-.m-p-small {
-	font-weight: 500;
-	font-size: 35px;
-	line-height: 122%;
-}
+// .m-p-small {
+// 	font-weight: 400;
+// 	font-size: 16px;
+// 	line-height: 142%;
+// 	letter-spacing: -0.01em;
+// }
 //========================================================================================================================================================
 // BUTTONS
 
