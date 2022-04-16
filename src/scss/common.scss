@@ -7,8 +7,6 @@
 	line-height: 109%;
 	letter-spacing: 0.02em;
 
-	color: $white-clr;
-
 	@media (max-width: $mobile) {
 		font-size: 34px;
 		line-height: 112%;
@@ -118,7 +116,7 @@
 // BUTTONS
 
 .btn {
-	&_header {
+	&_findtour-hero {
 		padding: 5px 20px;
 		border-radius: 10px;
 		font-size: 17px;
@@ -181,9 +179,8 @@
 //========================================================================================================================================================
 .more-link {
 	@extend .p-big;
-	display: inline-flex;
+	display: inline-block;
 	align-items: center;
-
 	border-radius: 50px;
 	color: $white-clr;
 	cursor: pointer;
@@ -201,6 +198,7 @@
 	@media (any-hover: hover) {
 		&:hover {
 			padding: 7px 20px;
+			margin: -7px -20px;
 			background-color: $green-400;
 		}
 
@@ -218,6 +216,7 @@
 	gap: 35px;
 
 	&__link {
+		@extend .p-normal;
 		transition: all 0.3s ease 0s;
 
 		@media (any-hover: hover) {

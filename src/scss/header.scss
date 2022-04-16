@@ -1,32 +1,16 @@
-//====================================================================================================
 .header {
-	height: 831px;
-	background: url("@img/header/header-img.jpg") center / cover no-repeat;
-
-	@media (max-width: $mobile) {
-		height: 488px;
-	}
-
-	// .header__top
-	&__top {
-	}
-
-	// .header__body
-	&__body {
-	}
-}
-.top-header {
-	padding: 29px 0;
 	height: 88px;
 	color: $white-clr;
 
-	// .top-header__container
+	// .header__container
 	&__container {
+		padding: 29px 0;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
-	// .top-header__logo
+
+	// .header__logo
 	&__logo {
 		@media (max-width: $mobile) {
 			width: 133px;
@@ -34,15 +18,16 @@
 		}
 	}
 
-	// .top-header__menu
+	// .header__menu
 	&__menu {
 	}
 
-	// .top-header__contacts
+	// .header__contacts
 	&__contacts {
 	}
 }
-.menu-top-header {
+
+.menu-header {
 	color: $white-clr;
 
 	@media (max-width: $mobile) {
@@ -65,51 +50,5 @@
 
 	// .menu-top-header__link
 	&__link {
-	}
-}
-
-.body-header {
-	// .body-header__container
-	&__container {
-		padding: 119px 0;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-
-		@media (max-width: $mobile) {
-			padding: 52px 0;
-		}
-	}
-
-	// .body-header__title
-	&__title {
-		margin-bottom: 50px;
-		text-align: center;
-
-		@media (max-width: $mobile) {
-			margin-bottom: 40px;
-		}
-	}
-
-	// .body-header__text
-	&__text {
-		max-width: 562px;
-		margin-bottom: 50px;
-		color: $white-clr;
-		text-align: center;
-
-		@media (max-width: $tablet) {
-			max-width: 442px;
-		}
-
-		@media (max-width: $mobile) {
-			max-width: 310px;
-			margin-bottom: 40px;
-		}
-	}
-
-	// .body-header__btn
-	&__btn {
 	}
 }

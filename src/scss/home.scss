@@ -1,3 +1,65 @@
+//========================================================================================================================================================
+// HERO SECTION
+
+.hero {
+	height: 831px;
+	background: url("@img/header/header-img.jpg") center / cover no-repeat;
+
+	@media (max-width: $mobile) {
+		height: 488px;
+	}
+
+	&__block {
+		padding: 119px 0;
+
+		@media (max-width: $mobile) {
+			padding: 52px 0;
+		}
+	}
+}
+
+.block-hero {
+	// .block-hero__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// .block-hero__title
+	&__title {
+		margin-bottom: 50px;
+		text-align: center;
+		color: $white-clr;
+
+		@media (max-width: $mobile) {
+			margin-bottom: 40px;
+		}
+	}
+
+	// .block-hero__text
+	&__text {
+		max-width: 562px;
+		margin-bottom: 50px;
+		color: $white-clr;
+		text-align: center;
+
+		@media (max-width: $tablet) {
+			max-width: 442px;
+		}
+
+		@media (max-width: $mobile) {
+			max-width: 310px;
+			margin-bottom: 40px;
+		}
+	}
+
+	// .block-hero__btn
+	&__btn {
+	}
+}
+
 //====================================================================================================
 // MAIN BLOCK
 
@@ -16,6 +78,11 @@
 
 	// .main__header
 	&__header {
+		margin-bottom: 100px;
+
+		@media (max-width: $mobile) {
+			margin-bottom: 50px;
+		}
 	}
 }
 
@@ -23,11 +90,6 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-bottom: 100px;
-
-	@media (max-width: $mobile) {
-		margin-bottom: 50px;
-	}
 
 	// .main-block-header__title
 	&__title {
@@ -128,20 +190,16 @@
 	height: 531px;
 	transform: scale(1);
 	transition: all 0.3s ease 0s;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	color: $white-clr;
 
 	@media (any-hover: hover) {
 		&:hover {
 			transform: scale(1.2);
 			z-index: 2;
 		}
-	}
-
-	&__inner {
-		padding: 50px;
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		color: $white-clr;
 	}
 
 	// .card-choose__title
@@ -157,7 +215,6 @@
 	// .card-choose__link
 	&__link {
 		align-self: flex-start;
-		margin-bottom: -2px;
 	}
 
 	&_1 {
@@ -241,7 +298,12 @@
 // STORY BLOCK
 
 .tour-story {
-	margin-top: -30px;
+	&-m_30 {
+		@media (max-width: $tablet) {
+			margin-top: -30px;
+		}
+	}
+
 	// .tour-story__body
 	&__body {
 		display: flex;

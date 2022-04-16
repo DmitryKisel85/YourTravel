@@ -3,50 +3,48 @@
 	@@include('html/_head.htm',{ "title":"Главная" })
 	<body>
 		<div class="wrapper">
-			<!-- HEADER -->
-			<header class="header">
-				<div class="header__top top-header">
-					<div class="top-header__container">
-						<a href="#" class="top-header__logo">
-							<img src="@img/header/YourTour.png" alt="logo" />
-						</a>
-						<nav class="top-header__menu menu-top-header">
-							<ul class="menu-top-header__list">
-								<li class="menu-top-header__item">
-									<a href="" class="menu-top-header__link p-normal">Туры</a>
-								</li>
-								<li class="menu-top-header__item">
-									<a href="" class="menu-top-header__link p-normal">Создать тур</a>
-								</li>
-								<li class="menu-top-header__item">
-									<a href="" class="menu-top-header__link p-normal">Отзывы</a>
-								</li>
-								<li class="menu-top-header__item">
-									<a href="" class="menu-top-header__link p-normal">Истории</a>
-								</li>
-							</ul>
-						</nav>
-						<a href="tel:79999999999" class="top-header__contacts p-normal">+7 999 999 99 99</a>
-					</div>
-				</div>
-				<div class="header__body body-header">
-					<div class="body-header__container">
-						<h1 class="body-header__title h1">Идеальные путешествия существуют</h1>
-						<p class="body-header__text p-normal">
+			<section class="hero">
+				<!-- HEADER -->
+				<header class="header">
+						<div class="header__container">
+							<a href="#" class="header__logo">
+								<img src="@img/header/YourTour.png" alt="logo" />
+							</a>
+							<nav class="header__menu menu-header">
+								<ul class="menu-header__list">
+									<li class="menu-header__item">
+										<a href="" class="menu-header__link p-normal">Туры</a>
+									</li>
+									<li class="menu-header__item">
+										<a href="" class="menu-header__link p-normal">Создать тур</a>
+									</li>
+									<li class="menu-header__item">
+										<a href="" class="menu-header__link p-normal">Отзывы</a>
+									</li>
+									<li class="menu-header__item">
+										<a href="" class="menu-header__link p-normal">Истории</a>
+									</li>
+								</ul>
+							</nav>
+							<a href="tel:79999999999" class="header__contacts p-normal">+7 999 999 99 99</a>
+						</div>					
+				</header>
+				<!-- HERO -->
+				<div class="hero__block block-hero">
+					<div class="block-hero__container">
+						<h1 class="block-hero__title h1">Идеальные путешествия существуют</h1>
+						<p class="block-hero__text p-normal">
 							Идейные соображения высшего порядка, а также рамки и 
 							место обучения кадров
 						</p>
-						<button class="body-header__btn btn_header">Найти тур</button>
+						<button class="block-hero__btn btn_findtour-hero">Найти тур</button>
 					</div>
 				</div>
-			</header>
+			</section>								
 			<!-- MAIN -->
 			<main class="main">
-<!-- 
-	*********
- -->
 				<!-- CHOOSE TOUR BLOCK -->
-				<div class="main__block tour-choose">
+				<section class="main__block tour-choose">
 					<div class="main__container">
 						<div class="main__header main-block-header">
 							<h2 class="main-block-header__title h2 mb-35">Выбери свой тур</h2>
@@ -70,83 +68,70 @@
 								</ul>
 							</nav>
 						</div>
-						<div class="tour-choose__items">
-							<div class="tour-choose__card card-choose card-choose_1">
-								<div class="card-choose__inner">
-									<h3 class="card-choose__title h3">
-										Путешествие в горы
-									</h3>
-									<p class="card-choose__price p-small">от 80 000 руб.</p>
-									<a href="" class="card-choose__link more-link">Подробнее</a>
-								</div>
+						<div class="tour-choose__items items-choose">
+							<div class="tour-choose__card card-choose card-choose_1">		
+								<h3 class="card-choose__title h3">
+									Путешествие в горы
+								</h3>
+								<p class="card-choose__price p-small">от 80 000 руб.</p>
+								<a href="" class="card-choose__link more-link">Подробнее</a>
 							</div>
 							<div class="tour-choose__card card-choose card-choose_2">
-								<div class="card-choose__inner">
 									<h3 class="card-choose__title h3">
 										Путешествие в горы
 									</h3>
 									<p class="card-choose__price p-small">от 80 000 руб.</p>
 									<a href="" class="card-choose__link more-link">Подробнее</a>
-								</div>
 							</div>
 							<div class="tour-choose__card card-choose card-choose_3">
-								<div class="card-choose__inner">
 									<h3 class="card-choose__title h3">
 										Путешествие в горы
 									</h3>
 									<p class="card-choose__price p-small">от 80 000 руб.</p>
 									<a href="" class="card-choose__link more-link">Подробнее</a>
-								</div>
 							</div>
 							<div class="tour-choose__card card-choose card-choose_4">
-								<div class="card-choose__inner">
 									<h3 class="card-choose__title h3">
 										Путешествие в горы
 									</h3>
 									<p class="card-choose__price p-small">от 80 000 руб.</p>
 									<a href="" class="card-choose__link more-link">Подробнее</a>
-								</div>
 							</div>
 							<div class="tour-choose__card card-choose card-choose_5">
-								<div class="card-choose__inner">
-									<h3 class="card-choose__title h3">
-										Путешествие в горы
+									<h3 class="card-choose__title h3">							Путешествие в горы
 									</h3>
 									<p class="card-choose__price p-small">от 80 000 руб.</p>
 									<a href="" class="card-choose__link more-link">Подробнее</a>
-								</div>
+								
 							</div>
-							<div class="tour-choose__card card-choose card-choose_6">
-								<div class="card-choose__inner">
+							<div class="tour-choose__card card-choose card-choose_6">	
 									<h3 class="card-choose__title h3">
 										Путешествие в горы
 									</h3>
 									<p class="card-choose__price p-small">от 80 000 руб.</p>
-									<a href="" class="card-choose__link more-link">Подробнее</a>
-								</div>
+									<a href="" class="card-choose__link more-link">Подробнее</a>								
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 <!-- 
 	*********
  -->
 				<!-- CREATE TOUR BLOCK -->
-				<div class="main__block tour-create">
+				<section class="main__block tour-create">
 					<div class="main__container">
 						<div class="main__header main-block-header">
 							<h2 class="main-block-header__title h2">Собери свой тур</h2>
-							<p class="main-block-header__text p-normal">Идейные соображения высшего порядка,<br />а также рамки и место обучения кадров</p>
+							<p class="main-block-header__text p-normal">Идейные соображения высшего порядка,а <br /> также рамки и место обучения кадров</p>
 						</div>
 
 						<form action="" class="form">
-							<div class="form__body">
 								<div class="form__group">
-									<label for="name" class="form__label">Имя</label>
+									<label for="name" class="form__label p-normal">Имя</label>
 									<input type="text" id="name" name="name" class="form__input input" placeholder="Введите Ваше имя" />
 								</div>
 								<div class="form__group">
-									<label for="direction" class="form__label">Направление</label>
+									<label for="direction" class="form__label p-normal">Направление</label>
 
 									<select id="direction" name="direction" class="form__select" placeholder="Куда хотите ехать">
 										<option value="1">Пункт №1</option>
@@ -178,7 +163,7 @@
 								<div class="form__bottom-block span_all">
 									<div class="form__radio radio-form">
 										<p class="radio-form__text p-normal">Вам есть 18 лет?</p>
-										<div class="options">
+										<div class="radio-form__options options">
 											<div class="options__item">
 												<input hidden id="o_1" class="options__input" checked type="radio" value="1" name="option" />
 												<label for="o_1" class="options__label"><span class="options__text p-normal">Да</span></label>
@@ -193,7 +178,7 @@
 									<div class="form__checkbox">
 										<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
 										<label for="c_1" class="checkbox__label"
-											><span class="checkbox__text">Нажимая кнопку, я принимаю условия <span>Лицензионного договора</span> </span></label
+											><span class="checkbox__text p-small ">Нажимая кнопку, я принимаю условия <span>Лицензионного договора</span> </span></label
 										>
 									</div>
 
@@ -202,22 +187,21 @@
 										<input autocomplete="off" type="reset" name="reset" placeholder="Сбросить" class="btn-form btn-form_reset" />
 									</div>
 								</div>
-							</div>
 						</form>
 					</div>
-				</div>
+				</section>
 <!-- 
 	*********
  -->
 				<!-- REVIEW BLOCK -->
-				<div class="main__block tour-review">
+				<section class="main__block tour-review">
 					<div class="main__container">
 						<div class="main__header main-block-header">
 							<h2 class="main-block-header__title h2">
 								Отзывы наших <br />
 								путешественников
 							</h2>
-							<p class="main-block-header__text p-normal">Идейные соображения высшего порядка,<br />а также рамки и место обучения кадров</p>
+							<p class="main-block-header__text p-normal">Идейные соображения высшего порядка,а <br /> также рамки и место обучения кадров</p>
 						</div>
 
 						<div class="tour-review__items">
@@ -250,7 +234,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 <!-- 
 	*********
  -->
@@ -258,7 +242,7 @@
 				<div class="main__block gallery-block">
 					<div class="main__header main-block-header">
 						<h2 class="main-block-header__title h2">Фотографии путешествий</h2>
-						<p class="main-block-header__text p-normal">Идейные соображения высшего порядка,<br />а также рамки и место обучения кадров</p>
+						<p class="main-block-header__text p-normal">Идейные соображения высшего порядка,а <br /> также рамки и место обучения кадров</p>
 					</div>
 				
 					<div class="gallery">			
@@ -285,13 +269,13 @@
 	*********
  -->	
 				<!-- STORY BLOCK -->
-				<div class="main__block tour-story">
+				<div class="main__block tour-story tour-story_m-30">
 					<div class="main__container">
 						<div class="main__header main-block-header">
 							<h2 class="main-block-header__title h2">
 								Истории путешествий
 							</h2>
-							<p class="main-block-header__text p-normal">Идейные соображения высшего порядка,<br />а также рамки и место обучения кадров</p>
+							<p class="main-block-header__text p-normal">Идейные соображения высшего порядка,а <br /> также рамки и место обучения кадров</p>
 						</div>
 						<div class="tour-story__body">
 							<article class="tour-story__item item-story item-story_1">
@@ -306,9 +290,9 @@
 								<div class="item-story__footer">
 									<a href="" class="item-story__link more-link">Подробнее</a>
 									<div class="item-story__social social">
-										<a href="" class="social__link p-normal"><span>instagram</span></a>
-										<a href="" class="social__link p-normal"><span>facebook</span></a>
-										<a href="" class="social__link p-normal"><span>Youtube</span></a>
+										<a href="" class="social__link "><span>instagram</span></a>
+										<a href="" class="social__link "><span>facebook</span></a>
+										<a href="" class="social__link "><span>Youtube</span></a>
 									</div>
 								</div>
 							</article>
@@ -324,8 +308,8 @@
 								<div class="item-story__footer">
 									<a href="" class="item-story__link more-link">Подробнее</a>
 									<div class="item-story__social social">
-										<a href="" class="social__link p-normal"><span>instagram</span></a>
-										<a href="" class="social__link p-normal"><span>Вконтакте</span></a>
+										<a href="" class="social__link "><span>instagram</span></a>
+										<a href="" class="social__link "><span>Вконтакте</span></a>
 									</div>
 								</div>
 							</article>
@@ -341,9 +325,9 @@
 								<div class="item-story__footer">
 									<a href="" class="item-story__link more-link">Подробнее</a>
 									<div class="item-story__social social">
-										<a href="" class="social__link p-normal"><span>instagram</span></a>
-										<a href="" class="social__link p-normal"><span>facebook</span></a>
-										<a href="" class="social__link p-normal"><span>Вконтакте</span></a>
+										<a href="" class="social__link "><span>instagram</span></a>
+										<a href="" class="social__link "><span>facebook</span></a>
+										<a href="" class="social__link "><span>Вконтакте</span></a>
 									</div>
 								</div>
 							</article>
@@ -354,31 +338,34 @@
 	*********
  -->
 				<!-- FINAL BLOCK -->
-				<div class="main__block block-final">
-					<div class="block-final__img">
-						<img src="@img/final-block/final.jpg" alt="final image">
-					</div>
-					<div class="block-final__body">
-						<h3 class="block-final__title h3">Пора в путешествие вместе с нами!</h3>
-						<p class="block-final__text p-normal">Напиши на почту и узнай подробности <br> на <a href="" class="block-final__link">yourtour@gmail.com</a> </p>
-					</div>
-				</div>
+		
+					<section class="main__block block-final">
+						<div class="block-final__img">
+							<img src="@img/final-block/final.jpg" alt="final image">
+						</div>
+						<div class="block-final__body">
+							<h3 class="block-final__title h3">Пора в путешествие вместе с нами!</h3>
+							<p class="block-final__text p-normal">Напиши на почту и узнай подробности <br> на <a href="" class="block-final__link">yourtour@gmail.com</a> </p>
+						</div>
+					</section>
+				
+			
 			</main>
-		</div>
-<!-- 
-	*********
- -->
+			<!-- 
+				*********
+			-->
 			<!-- FOOTER -->
 			<footer class="footer">
-					<div class="footer__container">
-						<p class="footer__text p-normal">Наши социальные сети</p>
-						<div class="footer__social social">
-							<a href="" class="social__link footer__link _icon-inst p-normal"> <span>instagram</span> </a>
-							<a href="" class="social__link footer__link _icon-fb p-normal"><span>facebook</span></a>
-							<a href="" class="social__link footer__link _icon-vk p-normal"><span>vkontakte</span></a>
-						</div>
-					</div>			
+				<div class="footer__container">
+					<p class="footer__text p-normal">Наши социальные сети</p>
+					<div class="footer__social social">
+						<a href="" class="social__link footer__link _icon-inst p-normal"> <span>instagram</span> </a>
+						<a href="" class="social__link footer__link _icon-fb p-normal"><span>facebook</span></a>
+						<a href="" class="social__link footer__link _icon-vk p-normal"><span>vkontakte</span></a>
+					</div>
+				</div>			
 			</footer>
+		</div>
 		@@include('html/_js.htm',{})
 	</body>
 </html>

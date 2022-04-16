@@ -27,17 +27,14 @@ textarea.input {
 }
 
 .form {
-	&__body {
-		padding: 70px;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		column-gap: 30px;
-		row-gap: 29px;
+	padding: 70px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
 
-		@media (max-width: $tablet) {
-			padding: 60px;
-			column-gap: 20px;
-		}
+	@media (max-width: $tablet) {
+		padding: 60px;
+		column-gap: 20px;
 	}
 
 	&__group {
@@ -47,7 +44,6 @@ textarea.input {
 	}
 
 	&__label {
-		@extend .p-normal;
 	}
 
 	&__input,
@@ -94,22 +90,16 @@ textarea.input {
 	}
 
 	&__radio {
-		margin-bottom: 27px;
+		margin-bottom: 30px;
 	}
 
 	&__checkbox {
-		margin-bottom: 29px;
+		margin-bottom: 28px;
 	}
 
 	&__btns {
 		display: flex;
 		gap: 30px;
-	}
-}
-
-.radio-form {
-	&__text {
-		margin-bottom: 8px;
 	}
 }
 

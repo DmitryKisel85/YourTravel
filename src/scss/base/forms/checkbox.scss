@@ -37,7 +37,6 @@
 	}
 	// .checkbox__text
 	&__text {
-		@extend .p-small;
 		color: $gray-300;
 
 		span {
