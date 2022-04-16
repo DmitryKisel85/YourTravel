@@ -1,10 +1,12 @@
-// Заголовки, общие БЄМ блоки и проче...
+//========================================================================================================================================================
+// TYPOGRAPHY
+
 .h1 {
-	text-align: center;
 	font-weight: 700;
 	font-size: 96px;
 	line-height: 109%;
 	letter-spacing: 0.02em;
+	text-align: center;
 	color: $white-clr;
 }
 
@@ -20,6 +22,28 @@
 	font-size: 35px;
 	line-height: 122%;
 }
+
+.m-h1 {
+	font-weight: 700;
+	font-size: 34px;
+	line-height: 112%;
+	letter-spacing: 0.02em;
+}
+
+.m-h2 {
+	font-weight: 700;
+	font-size: 34px;
+	line-height: 112%;
+	letter-spacing: 0.02em;
+}
+
+.m-h3 {
+	font-weight: 700;
+	font-size: 23px;
+	line-height: 120%;
+	letter-spacing: 0.04em;
+}
+
 //========================================================================================================================================================
 
 .p-big {
@@ -39,6 +63,24 @@
 	font-size: 17px;
 	line-height: 142%;
 	letter-spacing: -0.01em;
+}
+
+.m-p-big {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 142%;
+}
+
+.m-p-normal {
+	font-weight: 500;
+	font-size: 35px;
+	line-height: 122%;
+}
+
+.m-p-small {
+	font-weight: 500;
+	font-size: 35px;
+	line-height: 122%;
 }
 //========================================================================================================================================================
 // BUTTONS
