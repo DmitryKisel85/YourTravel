@@ -94,34 +94,32 @@
 	}
 }
 
-// .m-p-big {
-// 	font-weight: 700;
-// 	font-size: 16px;
-// 	line-height: 142%;
-// }
+.m-p-big {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 142%;
+}
 
-// .m-p-normal {
-// 	font-weight: 400;
-// 	font-size: 16px;
-// 	line-height: 142%;
-// }
+.m-p-normal {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 142%;
+}
 
-// .m-p-small {
-// 	font-weight: 400;
-// 	font-size: 16px;
-// 	line-height: 142%;
-// 	letter-spacing: -0.01em;
-// }
+.m-p-small {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 142%;
+	letter-spacing: -0.01em;
+}
 //========================================================================================================================================================
 // BUTTONS
 
 .btn {
 	&_findtour-hero {
+		@extend .p-small;
 		padding: 5px 20px;
 		border-radius: 10px;
-		font-size: 17px;
-		line-height: 142%;
-		letter-spacing: -0.01em;
 		color: $mainColor;
 		background-color: $white-clr;
 		transition: all 0.3s ease 0s;
@@ -140,13 +138,18 @@
 
 .btn-form {
 	@extend .p-normal;
+
 	padding: 15px 71px;
 	border-radius: 10px;
+	transition: all 0.3s ease 0s;
+
+	@media (max-width: $mobile) {
+		padding: 15px 30px;
+	}
 
 	&_submit {
 		color: $white-clr;
 		background-color: $green-400;
-		transition: all 0.3s ease 0s;
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -162,7 +165,6 @@
 	&_reset {
 		color: $green-400;
 		background-color: $green-100;
-		transition: all 0.3s ease 0s;
 
 		@media (any-hover: hover) {
 			&:hover {
@@ -179,7 +181,7 @@
 //========================================================================================================================================================
 .more-link {
 	@extend .p-big;
-	display: inline-block;
+	display: flex;
 	align-items: center;
 	border-radius: 50px;
 	color: $white-clr;
@@ -213,11 +215,55 @@
 
 .social {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 35px;
+
+	@media (max-width: $mobile) {
+		gap: 15px;
+	}
+
+	&__link {
+		@extend .p-normal;
+		transition: all 0.3s ease 0s;
+
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&:active {
+			color: $orange-200;
+		}
+	}
+}
+
+.social-with-icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	gap: 35px;
 
 	&__link {
 		@extend .p-normal;
 		transition: all 0.3s ease 0s;
+		display: flex;
+		align-items: center;
+
+		&::before {
+			@extend .p-normal;
+			position: relative;
+			display: inline-block;
+			margin-right: 10px;
+			color: $gray-300;
+
+			@media (max-width: $mobile) {
+				margin-right: 5px;
+			}
+		}
 
 		@media (any-hover: hover) {
 			&:hover {

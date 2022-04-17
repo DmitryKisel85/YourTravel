@@ -30,19 +30,28 @@ textarea.input {
 	padding: 70px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap: 30px;
+	column-gap: 30px;
+	row-gap: 33px;
 	background-color: $white-clr;
 	border-radius: 50px;
+	overflow: hidden;
 
 	@media (max-width: $tablet) {
 		padding: 60px;
 		column-gap: 20px;
 	}
 
+	@media (max-width: $mobile) {
+		grid-template-columns: 1fr;
+		padding: 20px 20px 40px;
+		border-radius: 30px;
+	}
+
 	&__group {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
+		gap: 8px;
 	}
 
 	&__label {
@@ -51,6 +60,7 @@ textarea.input {
 	&__input,
 	&__select,
 	&__textarea {
+		border-radius: 10px;
 		&:focus {
 			border: 1px solid $gray-300;
 			outline: 1px solid $gray-300;
@@ -59,19 +69,24 @@ textarea.input {
 
 	&__input,
 	&__select {
-		display: block;
-		width: 100%;
+		display: flex;
+		align-items: center;
 		height: 68px;
-		border-radius: 10px;
 		padding: 20px;
 		color: $mainColor;
 		background-color: $beige-100;
 		border: 1px solid $beige-200;
 
-		::placeholder {
+		@media (max-width: $mobile) {
+			padding: 10px;
+			height: 43px;
+		}
+
+		&::placeholder {
 			@extend .p-normal;
 			color: $gray-300;
 		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				cursor: pointer;
@@ -81,27 +96,32 @@ textarea.input {
 
 	&__textarea {
 		height: 152px;
-
 		padding: 20px;
 		color: $mainColor;
 		background-color: $beige-100;
 		border: 1px solid $beige-200;
+
+		@media (max-width: $mobile) {
+			height: 132px;
+		}
 	}
 
 	&__bottom-block {
 	}
 
 	&__radio {
-		margin-bottom: 30px;
 	}
 
 	&__checkbox {
-		margin-bottom: 28px;
 	}
 
 	&__btns {
 		display: flex;
 		gap: 30px;
+
+		@media (max-width: $mobile) {
+			gap: 10px;
+		}
 	}
 }
 

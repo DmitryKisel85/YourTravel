@@ -44,7 +44,7 @@
 				<section class="main__block tour-choose">
 					<div class="main__container">
 						<div class="main__header main-block-header">
-							<h2 class="main-block-header__title h2 mb-35">Выбери свой тур</h2>
+							<h2 class="main-block-header__title h2">Выбери свой тур</h2>
 							<nav class="main-block-header__menu main-block-menu">
 								<ul class="main-block-menu__list">
 									<li class="main-block-menu__item">
@@ -66,34 +66,46 @@
 							</nav>
 						</div>
 						<div class="tour-choose__items items-choose">
-							<div class="tour-choose__card card-choose card-choose_1">
-								<h3 class="card-choose__title h3">Путешествие в горы</h3>
-								<p class="card-choose__price p-small">от 80 000 руб.</p>
+							<div class="items-choose__card card-choose card-choose_1">
+								<div class="card-choose__header">
+									<h3 class="card-choose__title h3">Путешествие в горы</h3>
+									<p class="card-choose__price p-small">от 80 000 руб.</p>
+								</div>
 								<a href="" class="card-choose__link more-link">Подробнее</a>
 							</div>
 							<div class="tour-choose__card card-choose card-choose_2">
-								<h3 class="card-choose__title h3">Путешествие в горы</h3>
-								<p class="card-choose__price p-small">от 80 000 руб.</p>
+								<div class="card-choose__header">
+									<h3 class="card-choose__title h3">Путешествие в горы</h3>
+									<p class="card-choose__price p-small">от 80 000 руб.</p>
+								</div>
 								<a href="" class="card-choose__link more-link">Подробнее</a>
 							</div>
 							<div class="tour-choose__card card-choose card-choose_3">
-								<h3 class="card-choose__title h3">Путешествие в горы</h3>
-								<p class="card-choose__price p-small">от 80 000 руб.</p>
+								<div class="card-choose__header">
+									<h3 class="card-choose__title h3">Путешествие в горы</h3>
+									<p class="card-choose__price p-small">от 80 000 руб.</p>
+								</div>
 								<a href="" class="card-choose__link more-link">Подробнее</a>
 							</div>
 							<div class="tour-choose__card card-choose card-choose_4">
-								<h3 class="card-choose__title h3">Путешествие в горы</h3>
-								<p class="card-choose__price p-small">от 80 000 руб.</p>
+								<div class="card-choose__header">
+									<h3 class="card-choose__title h3">Путешествие в горы</h3>
+									<p class="card-choose__price p-small">от 80 000 руб.</p>
+								</div>
 								<a href="" class="card-choose__link more-link">Подробнее</a>
 							</div>
 							<div class="tour-choose__card card-choose card-choose_5">
-								<h3 class="card-choose__title h3">Путешествие в горы</h3>
-								<p class="card-choose__price p-small">от 80 000 руб.</p>
+								<div class="card-choose__header">
+									<h3 class="card-choose__title h3">Путешествие в горы</h3>
+									<p class="card-choose__price p-small">от 80 000 руб.</p>
+								</div>
 								<a href="" class="card-choose__link more-link">Подробнее</a>
 							</div>
 							<div class="tour-choose__card card-choose card-choose_6">
-								<h3 class="card-choose__title h3">Путешествие в горы</h3>
-								<p class="card-choose__price p-small">от 80 000 руб.</p>
+								<div class="card-choose__header">
+									<h3 class="card-choose__title h3">Путешествие в горы</h3>
+									<p class="card-choose__price p-small">от 80 000 руб.</p>
+								</div>
 								<a href="" class="card-choose__link more-link">Подробнее</a>
 							</div>
 						</div>
@@ -107,10 +119,7 @@
 					<div class="main__container">
 						<div class="main__header main-block-header">
 							<h2 class="main-block-header__title h2">Собери свой тур</h2>
-							<p class="main-block-header__text p-normal">
-								Идейные соображения высшего порядка,а <br />
-								также рамки и место обучения кадров
-							</p>
+							<p class="main-block-header__text p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
 						</div>
 
 						<form action="" class="form">
@@ -138,17 +147,17 @@
 							</div>
 							<div class="form__group">
 								<label for="date_from" class="form__label p-normal">Дата от</label>
-								<input type="date" id="date_from" name="date_from" class="form__input" data-placeholder="ДД.ММ.ГГГГ" />
+								<input type="text" name="date_from" class="form__input" placeholder="ДД.ММ.ГГГГ" />
 							</div>
 							<div class="form__group">
 								<label for="date_to" class="form__label p-normal">Дата до</label>
-								<input type="date" id="date_to" name="date_to" class="form__input" data-placeholder="ДД.ММ.ГГГГ" />
+								<input type="text" name="date_to" class="form__input" placeholder="ДД.ММ.ГГГГ" />
 							</div>
 							<div class="form__group span_all">
 								<label for="text" class="form__label p-normal">Комментарий</label>
 								<textarea class="form__textarea" name="text" id="text"></textarea>
 							</div>
-							<div class="form__bottom-block span_all">
+							<div class="form__group span_all">
 								<div class="form__radio radio-form">
 									<p class="radio-form__text p-normal">Вам есть 18 лет?</p>
 									<div class="radio-form__options options">
@@ -162,14 +171,16 @@
 										</div>
 									</div>
 								</div>
-
-								<div class="form__checkbox">
+							</div>
+							<div class="form__group span_all">
+								<div class="form__checkbox checkbox">
 									<input id="c_1" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]" />
 									<label for="c_1" class="checkbox__label"
 										><span class="checkbox__text p-small">Нажимая кнопку, я принимаю условия <span>Лицензионного договора</span> </span></label
 									>
 								</div>
-
+							</div>
+							<div class="form__group span_all">
 								<div class="form__btns">
 									<button type="submit" class="btn-form btn-form_submit">Найти тур</button>
 									<input autocomplete="off" type="reset" name="reset" placeholder="Сбросить" class="btn-form btn-form_reset" />
@@ -189,10 +200,7 @@
 								Отзывы наших <br />
 								путешественников
 							</h2>
-							<p class="main-block-header__text p-normal">
-								Идейные соображения высшего порядка,а <br />
-								также рамки и место обучения кадров
-							</p>
+							<p class="main-block-header__text p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров</p>
 						</div>
 
 						<div class="tour-review__items">
@@ -206,7 +214,9 @@
 										<div class="tour-review__name h3">Мария</div>
 										<p class="tour-review__tour p-small">Тур: Вдали от дома</p>
 									</div>
-									<img src="@img/review-tour/review-1.jpg" alt="client image" class="tour-review__image" />
+									<div class="tour-review__image-block">
+										<img src="@img/review-tour/review-1.jpg" alt="client image" class="tour-review__image" />
+									</div>
 								</div>
 							</div>
 							<div class="tour-review__item">
@@ -220,7 +230,9 @@
 										<div class="tour-review__name h3">Павел</div>
 										<p class="tour-review__tour p-small">Тур:Путешествие в горы</p>
 									</div>
-									<img src="@img/review-tour/review-2.jpg" alt="client image" class="tour-review__image" />
+									<div class="tour-review__image-block">
+										<img src="@img/review-tour/review-2.jpg" alt="client image" class="tour-review__image" />
+									</div>
 								</div>
 							</div>
 						</div>
@@ -239,21 +251,53 @@
 						</p>
 					</div>
 					<div class="gallery">
-						<img class="gallery__img gallery__img_1" src="@img/gallery/travel_photo-1.jpg" alt="Gallery image" />
-						<img class="gallery__img gallery__img_2" src="@img/gallery/travel_photo-2.jpg" alt="Gallery image" />
-						<img class="gallery__img gallery__img_3" src="@img/gallery/travel_photo-3.jpg" alt="Gallery image" />
-						<img class="gallery__img gallery__img_4" src="@img/gallery/travel_photo-4.jpg" alt="Gallery image" />
+						<div class="gallery__row gallery__row_4photos">
+							<div class="gallery__item">
+								<img class="gallery__img gallery__img_big" src="@img/gallery/travel_photo-1.jpg" alt="Gallery image" />
+							</div>
+							<div class="gallery__item">
+								<img class="gallery__img gallery__img_big" src="@img/gallery/travel_photo-2.jpg" alt="Gallery image" />
+							</div>
+							<div class="gallery__item">
+								<img class="gallery__img gallery__img_big" src="@img/gallery/travel_photo-3.jpg" alt="Gallery image" />
+							</div>
+							<div class="gallery__item">
+								<img class="gallery__img gallery__img_big" src="@img/gallery/travel_photo-4.jpg" alt="Gallery image" />
+							</div>
+						</div>
 
-						<img class="gallery__img gallery__img_5" src="@img/gallery/travel_photo-5.jpg" alt="Gallery image" />
-						<img class="gallery__img gallery__img_6" src="@img/gallery/travel_photo-6.jpg" alt="Gallery image" />
-						<img class="gallery__img gallery__img_7" src="@img/gallery/travel_photo-7.jpg" alt="Gallery image" />
-						<img class="gallery__img gallery__img_8" src="@img/gallery/travel_photo-8.jpg" alt="Gallery image" />
-						<img class="gallery__img gallery__img_9" src="@img/gallery/travel_photo-9.jpg" alt="Gallery image" />
+						<div class="gallery__row gallery__row_5photos">
+							<div class="gallery__item">
+								<img class="gallery__img gallery__img_big" src="@img/gallery/travel_photo-5.jpg" alt="Gallery image" />
+							</div>
+							<div class="gallery__item">
+								<img class="gallery__img gallery__img_big" src="@img/gallery/travel_photo-6.jpg" alt="Gallery image" />
+							</div>
+							<div class="gallery__item">
+								<img class="gallery__img gallery__img_big" src="@img/gallery/travel_photo-7.jpg" alt="Gallery image" />
+							</div>
+							<div class="gallery__item">
+								<img class="gallery__img gallery__img_big" src="@img/gallery/travel_photo-8.jpg" alt="Gallery image" />
+							</div>
+							<div class="gallery__item">
+								<img class="gallery__img gallery__img_big" src="@img/gallery/travel_photo-9.jpg" alt="Gallery image" />
+							</div>
+						</div>
 
-						<img class="gallery__img gallery__img_10" src="@img/gallery/travel_photo-10.jpg" alt="Gallery image" />
-						<img class="gallery__img gallery__img_11" src="@img/gallery/travel_photo-11.jpg" alt="Gallery image" />
-						<img class="gallery__img gallery__img_12" src="@img/gallery/travel_photo-12.jpg" alt="Gallery image" />
-						<img class="gallery__img gallery__img_13" src="@img/gallery/travel_photo-13.jpg" alt="Gallery image" />
+						<div class="gallery__row gallery__row_4photos">
+							<div class="gallery__item">
+								<img class="gallery__img gallery__img_big" src="@img/gallery/travel_photo-10.jpg" alt="Gallery image" />
+							</div>
+							<div class="gallery__item">
+								<img class="gallery__img gallery__img_big" src="@img/gallery/travel_photo-11.jpg" alt="Gallery image" />
+							</div>
+							<div class="gallery__item">
+								<img class="gallery__img gallery__img_big" src="@img/gallery/travel_photo-12.jpg" alt="Gallery image" />
+							</div>
+							<div class="gallery__item">
+								<img class="gallery__img gallery__img_big" src="@img/gallery/travel_photo-13.jpg" alt="Gallery image" />
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -261,7 +305,7 @@
 	*********
  -->
 				<!-- STORY BLOCK -->
-				<section class="main__block tour-story tour-story_m-30">
+				<section class="main__block tour-story">
 					<div class="main__container">
 						<div class="main__header main-block-header">
 							<h2 class="main-block-header__title h2">Истории путешествий</h2>
@@ -272,13 +316,16 @@
 						</div>
 						<div class="tour-story__body">
 							<article class="tour-story__item item-story item-story_1">
-								<h3 class="item-story__title h3">Автостопом в Стамбул</h3>
-								<p class="item-story__text p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:</p>
-								<ul class="item-story__list p-normal">
-									<li class="item-story__item">вкусная еда</li>
-									<li class="item-story__item">дешевый транспорт</li>
-									<li class="item-story__item">красивый город</li>
-								</ul>
+								<div class="item-story__body">
+									<h3 class="item-story__title h3">Автостопом в Стамбул</h3>
+									<p class="item-story__text p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:</p>
+									<ul class="item-story__list p-normal">
+										<li class="item-story__item">вкусная еда</li>
+										<li class="item-story__item">дешевый транспорт</li>
+										<li class="item-story__item">красивый город</li>
+									</ul>
+								</div>
+
 								<div class="item-story__footer">
 									<a href="" class="item-story__link more-link">Подробнее</a>
 									<div class="item-story__social social">
@@ -289,13 +336,11 @@
 								</div>
 							</article>
 							<article class="tour-story__item item-story item-story_2">
-								<h3 class="item-story__title h3">Автостопом в Стамбул</h3>
-								<p class="item-story__text p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:</p>
-								<ul class="item-story__list p-normal">
-									<li class="item-story__item">вкусная еда</li>
-									<li class="item-story__item">дешевый транспорт</li>
-									<li class="item-story__item">красивый город</li>
-								</ul>
+								<div class="item-story__body">
+									<h3 class="item-story__title h3">Автостопом в Стамбул</h3>
+									<p class="item-story__text p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:</p>
+								</div>
+
 								<div class="item-story__footer">
 									<a href="" class="item-story__link more-link">Подробнее</a>
 									<div class="item-story__social social">
@@ -305,13 +350,11 @@
 								</div>
 							</article>
 							<article class="tour-story__item item-story item-story_3">
-								<h3 class="item-story__title h3">Автостопом в Стамбул</h3>
-								<p class="item-story__text p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:</p>
-								<ul class="item-story__list p-normal">
-									<li class="item-story__item">вкусная еда</li>
-									<li class="item-story__item">дешевый транспорт</li>
-									<li class="item-story__item">красивый город</li>
-								</ul>
+								<div class="item-story__body">
+									<h3 class="item-story__title h3">Автостопом в Стамбул</h3>
+									<p class="item-story__text p-normal">Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании новых предложений:</p>
+								</div>
+
 								<div class="item-story__footer">
 									<a href="" class="item-story__link more-link">Подробнее</a>
 									<div class="item-story__social social">
@@ -349,10 +392,10 @@
 			<footer class="footer">
 				<div class="footer__container">
 					<p class="footer__text p-normal">Наши социальные сети</p>
-					<div class="footer__social social">
-						<a href="" class="social__link footer__link _icon-inst p-normal"> <span>instagram</span> </a>
-						<a href="" class="social__link footer__link _icon-fb p-normal"><span>facebook</span></a>
-						<a href="" class="social__link footer__link _icon-vk p-normal"><span>vkontakte</span></a>
+					<div class="footer__social social social-with-icons">
+						<a href="" class="social-with-icons__link _icon-inst p-normal"> <span>instagram</span> </a>
+						<a href="" class="social-with-icons__link _icon-fb p-normal"><span>facebook</span></a>
+						<a href="" class="social-with-icons__link _icon-vk p-normal"><span>vkontakte</span></a>
 					</div>
 				</div>
 			</footer>

@@ -6,15 +6,13 @@
 
 .options {
 	display: flex;
-	gap: 30px;
+	align-items: center;
+	gap: 31px;
 
 	// .options__item
 	&__item {
 		position: relative;
 		cursor: pointer;
-		&:not(:last-child) {
-			margin-bottom: em(5);
-		}
 	}
 	// .options__input
 	&__input {

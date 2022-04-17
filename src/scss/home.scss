@@ -10,8 +10,6 @@
 	}
 
 	&__block {
-		padding: 119px 0;
-
 		@media (max-width: $mobile) {
 			padding: 52px 0;
 		}
@@ -29,7 +27,7 @@
 
 	// .block-hero__title
 	&__title {
-		margin-bottom: 50px;
+		margin: 119px 0 0 0;
 		text-align: center;
 		color: $white-clr;
 
@@ -41,7 +39,7 @@
 	// .block-hero__text
 	&__text {
 		max-width: 562px;
-		margin-bottom: 50px;
+		margin: 50px 0;
 		color: $white-clr;
 		text-align: center;
 
@@ -65,12 +63,12 @@
 
 .main {
 	background-color: $beige-100;
-	padding: 135px 0;
-	&__block:not(:last-child) {
-		margin-bottom: 135px;
+
+	&__block {
+		margin: 135px 0;
 
 		@media (max-width: $mobile) {
-			margin-bottom: 75px;
+			margin: 75px 0;
 		}
 	}
 
@@ -80,10 +78,19 @@
 
 	// .main__header
 	&__header {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
 		margin-bottom: 100px;
 
 		@media (max-width: $mobile) {
-			margin-bottom: 50px;
+			margin-bottom: 40px;
+
+			.tour-choose & {
+				margin-bottom: 50px;
+			}
 		}
 	}
 }
@@ -96,10 +103,11 @@
 	// .main-block-header__title
 	&__title {
 		margin-bottom: 30px;
-	}
-	// .main-block-header__title .mb-35
-	&__title.mb-35 {
-		margin-bottom: 35px;
+		text-align: center;
+
+		.tour-choose & {
+			margin-bottom: 35px;
+		}
 	}
 
 	// .main-block-header__menu
@@ -108,6 +116,7 @@
 
 	// .main-block-header__text
 	&__text {
+		max-width: 418px;
 		text-align: center;
 		color: $gray-300;
 	}
@@ -138,6 +147,10 @@
 			margin-top: 3px;
 			border-bottom: 2px solid transparent;
 			width: 100%;
+
+			@media (max-width: $mobile) {
+				margin-top: 0;
+			}
 		}
 
 		@media (any-hover: hover) {
@@ -148,6 +161,10 @@
 					margin-top: 3px;
 					border-bottom: 2px solid $mainColor;
 					width: 100%;
+
+					@media (max-width: $mobile) {
+						margin-top: 0;
+					}
 				}
 			}
 		}
@@ -161,6 +178,10 @@
 				margin-top: 3px;
 				border-bottom: 2px solid $orange-200;
 				width: 100%;
+
+				@media (max-width: $mobile) {
+					margin-top: 0;
+				}
 			}
 		}
 	}
@@ -172,14 +193,6 @@
 .tour-choose {
 	// .tour-choose__items
 	&__items {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 30px;
-
-		@media (max-width: $tablet) {
-			grid-template-columns: repeat(2, 1fr);
-			gap: 18px;
-		}
 	}
 
 	// .tour-choose__card
@@ -187,14 +200,30 @@
 	}
 }
 
+.items-choose {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+
+	@media (max-width: $tablet) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 18px;
+	}
+
+	@media (max-width: $mobile) {
+		grid-template-columns: 1fr;
+	}
+}
+
 .card-choose {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 50px;
 	border-radius: 50px;
 	height: 531px;
 	transform: scale(1);
 	transition: all 0.3s ease 0s;
-	padding: 50px;
-	display: flex;
-	flex-direction: column;
 	color: $white-clr;
 
 	@media (any-hover: hover) {
@@ -204,14 +233,23 @@
 		}
 	}
 
+	@media (max-width: $mobile) {
+		height: 318px;
+		padding: 25px;
+		border-radius: 20px;
+	}
+
 	// .card-choose__title
 	&__title {
-		margin-bottom: 19px;
+		margin-bottom: 16px;
+
+		@media (max-width: $mobile) {
+			margin-bottom: 13px;
+		}
 	}
 
 	// .card-choose__price
 	&__price {
-		flex: 1;
 	}
 
 	// .card-choose__link
@@ -248,35 +286,51 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 30px;
+
+		@media (max-width: $mobile) {
+			grid-template-columns: 1fr;
+			gap: 18px;
+		}
 	}
 
 	// .tour-review__item
 	&__item {
 		min-height: 673px;
+		border-radius: 50px;
 		padding: 40px;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 		background-color: $beige-200;
-		border-radius: 50px;
+
+		@media (max-width: $mobile) {
+			min-height: 408px;
+			padding: 20px;
+			border-radius: 20px;
+		}
 	}
 
 	// .tour-review__text
 	&__text {
-		flex: 1 1 auto;
 	}
 
 	// .tour-review__footer
 	&__footer {
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-end;
 		padding-top: 70px;
+
+		@media (max-width: $mobile) {
+			padding-top: 40px;
+		}
 	}
 
 	// .tour-review__description
 	&__description {
 		display: flex;
 		flex-direction: column;
-		gap: 10px;
+		gap: 8px;
 	}
 
 	// .tour-review__name
@@ -288,11 +342,16 @@
 		color: $gray-300;
 	}
 
-	// .tour-review__image
-	&__image {
-		display: inline-block;
+	&__image-block {
+		display: block;
 		width: 75px;
 		height: 75px;
+	}
+
+	// .tour-review__image
+	&__image {
+		width: 100%;
+		height: 100%;
 		border-radius: 100px;
 	}
 }
@@ -300,17 +359,14 @@
 // STORY BLOCK
 
 .tour-story {
-	&-m_30 {
-		@media (max-width: $tablet) {
-			margin-top: -30px;
-		}
-	}
-
 	// .tour-story__body
 	&__body {
 		display: flex;
 		flex-direction: column;
 		gap: 50px;
+		@media (max-width: $mobile) {
+			gap: 20px;
+		}
 	}
 
 	// .tour-story__item
@@ -321,17 +377,28 @@
 .item-story {
 	display: flex;
 	flex-direction: column;
-	height: 567px;
+	justify-content: space-between;
+	min-height: 567px;
 	border-radius: 50px;
 	padding: 60px;
 	transform: scale(1);
 	transition: all 0.3s ease 0s;
+
+	@media (max-width: $mobile) {
+		min-height: 455px;
+		border-radius: 20px;
+		padding: 30px;
+	}
 
 	@media (any-hover: hover) {
 		&:hover {
 			transform: scale(1.2);
 			z-index: 2;
 		}
+	}
+
+	// .item-story__body
+	&__body {
 	}
 
 	// .item-story__title
@@ -373,6 +440,10 @@
 
 	&__social {
 		color: $white-clr;
+
+		@media (max-width: $mobile) {
+			display: none;
+		}
 	}
 
 	&_1 {
@@ -390,15 +461,23 @@
 // FINAL BLOCK
 
 .block-final {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	display: flex;
+	justify-content: center;
 	align-items: center;
 	gap: 30px;
 
+	@media (max-width: $mobile) {
+		grid-template-columns: 1fr;
+	}
+
 	// .block-final__img
 	&__img {
-		justify-self: end;
 		max-width: 370px;
+
+		@media (max-width: $mobile) {
+			justify-self: center;
+			max-width: 130px;
+		}
 
 		img {
 			border-radius: 50px;
@@ -410,12 +489,19 @@
 
 	// .block-final__body
 	&__body {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 		max-width: 371px;
+
+		@media (max-width: $mobile) {
+			text-align: center;
+			max-width: 291px;
+		}
 	}
 
 	// .block-final__title
 	&__title {
-		margin-bottom: 20px;
 	}
 
 	// .block-final__text

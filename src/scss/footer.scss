@@ -1,41 +1,33 @@
 .footer {
-	height: 88px;
-
 	background-color: $beige-200;
-	display: flex;
-	align-items: center;
+
+	@media (max-width: $mobile) {
+		height: 95px;
+	}
 
 	&__container {
+		height: 88px;
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
-
-		flex: 1 1 auto;
+		align-items: center;
 
 		@media (max-width: $mobile) {
 			flex-direction: column;
+			padding: 20px;
+			gap: 7px;
 		}
+	}
+
+	&__block {
 	}
 
 	// .footer__text
 	&__text {
+		display: block;
 		color: $gray-300;
 	}
 
 	// .footer__social
 	&__social {
-	}
-
-	&__link {
-		display: flex;
-		align-items: center;
-
-		&::before {
-			@extend .p-normal;
-			position: relative;
-			display: inline-block;
-			margin-right: 10px;
-			color: $gray-300;
-		}
 	}
 }
