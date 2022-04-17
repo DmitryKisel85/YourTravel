@@ -50,5 +50,10 @@
 
 	// .menu-top-header__link
 	&__link {
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }

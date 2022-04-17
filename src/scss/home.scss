@@ -64,11 +64,13 @@
 // MAIN BLOCK
 
 .main {
-	&__block {
-		padding: 135px 0 0 0;
+	background-color: $beige-100;
+	padding: 135px 0;
+	&__block:not(:last-child) {
+		margin-bottom: 135px;
 
 		@media (max-width: $mobile) {
-			padding: 75px 0 0 0;
+			margin-bottom: 75px;
 		}
 	}
 
@@ -347,13 +349,15 @@
 
 	// .item-story__list
 	&__list {
+		position: relative;
+		margin-top: -10px;
+		margin-left: 32px;
 		flex: 1 1 auto;
 		color: $white-clr;
 	}
 
 	// .item-story__item
 	&__item {
-		margin-left: 15px;
 		list-style-type: disc;
 	}
 

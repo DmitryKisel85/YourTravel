@@ -31,6 +31,8 @@ textarea.input {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 30px;
+	background-color: $white-clr;
+	border-radius: 50px;
 
 	@media (max-width: $tablet) {
 		padding: 60px;
