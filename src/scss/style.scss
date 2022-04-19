@@ -143,9 +143,10 @@ body {
 		}
 		@media (max-width: $mobile) {
 			max-width: rem(318);
-			@if ($containerPadding>0 and $maxWidthContainer>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
-			}
+
+			// @if ($containerPadding>0 and $maxWidthContainer>0) {
+			// 	padding: 0 rem(math.div($containerPadding, 2));
+			// }
 		}
 	}
 }

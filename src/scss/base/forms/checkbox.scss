@@ -1,8 +1,6 @@
 .checkbox {
 	position: relative;
-	&:not(:last-child) {
-		margin-bottom: em(5);
-	}
+
 	// .checkbox__input
 	&__input {
 		position: absolute;
@@ -14,7 +12,12 @@
 		}
 		&:checked + .checkbox__label:before {
 			content: "";
-			background: url("@img/check.svg") center no-repeat;
+			display: block;
+			background: url("@img/form-icons/check.svg") center no-repeat;
+
+			@media (max-width: $mobile) {
+				background: url("@img/form-icons/check_small.svg") center no-repeat;
+			}
 		}
 	}
 	// .checkbox__label
@@ -23,7 +26,6 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-
 		gap: 19px;
 
 		&:before {
@@ -34,6 +36,16 @@
 			height: 25px;
 			border-radius: 5px;
 			border: 1px solid $mainColor;
+
+			@media (max-width: $mobile) {
+				width: 20px;
+				height: 20px;
+				flex: 0 0 20px;
+			}
+		}
+
+		@media (max-width: $mobile) {
+			gap: 10px;
 		}
 	}
 	// .checkbox__text

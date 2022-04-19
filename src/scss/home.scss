@@ -32,7 +32,7 @@
 		color: $white-clr;
 
 		@media (max-width: $mobile) {
-			margin-bottom: 40px;
+			margin-top: 0;
 		}
 	}
 
@@ -49,7 +49,7 @@
 
 		@media (max-width: $mobile) {
 			max-width: 310px;
-			margin-bottom: 40px;
+			margin: 40px 0;
 		}
 	}
 
@@ -78,11 +78,6 @@
 
 	// .main__header
 	&__header {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-
 		margin-bottom: 100px;
 
 		@media (max-width: $mobile) {
@@ -99,14 +94,23 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 
 	// .main-block-header__title
 	&__title {
 		margin-bottom: 30px;
 		text-align: center;
 
+		@media (max-width: $mobile) {
+			margin-bottom: 20px;
+		}
+
 		.tour-choose & {
 			margin-bottom: 35px;
+
+			@media (max-width: $mobile) {
+				margin-bottom: 30px;
+			}
 		}
 	}
 
@@ -119,6 +123,9 @@
 		max-width: 418px;
 		text-align: center;
 		color: $gray-300;
+
+		@media (max-width: $mobile) {
+		}
 	}
 }
 
@@ -283,28 +290,28 @@
 .tour-review {
 	// .tour-review__items
 	&__items {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+		display: flex;
+		justify-content: center;
 		gap: 30px;
 
 		@media (max-width: $mobile) {
-			grid-template-columns: 1fr;
+			flex-direction: column;
 			gap: 18px;
 		}
 	}
 
 	// .tour-review__item
 	&__item {
-		min-height: 673px;
+		flex: 1 1 50%;
 		border-radius: 50px;
 		padding: 40px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+
 		background-color: $beige-200;
 
 		@media (max-width: $mobile) {
-			min-height: 408px;
 			padding: 20px;
 			border-radius: 20px;
 		}
@@ -364,6 +371,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 50px;
+
 		@media (max-width: $mobile) {
 			gap: 20px;
 		}
@@ -412,6 +420,11 @@
 		color: $white-clr;
 		max-width: 554px;
 		margin-bottom: 30px;
+
+		@media (max-width: $mobile) {
+			font-size: 16px;
+			line-height: 142%;
+		}
 	}
 
 	// .item-story__list
@@ -467,7 +480,7 @@
 	gap: 30px;
 
 	@media (max-width: $mobile) {
-		grid-template-columns: 1fr;
+		flex-direction: column;
 	}
 
 	// .block-final__img
@@ -475,7 +488,6 @@
 		max-width: 370px;
 
 		@media (max-width: $mobile) {
-			justify-self: center;
 			max-width: 130px;
 		}
 
@@ -484,6 +496,10 @@
 			width: 100%;
 			height: auto;
 			object-fit: cover;
+
+			@media (max-width: $mobile) {
+				border-radius: 20px;
+			}
 		}
 	}
 

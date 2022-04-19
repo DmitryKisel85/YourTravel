@@ -1,19 +1,17 @@
 .footer {
 	background-color: $beige-200;
 
-	@media (max-width: $mobile) {
-		height: 95px;
-	}
-
 	&__container {
-		height: 88px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		padding: 30px 0;
 
 		@media (max-width: $mobile) {
+			padding: 20px 0;
 			flex-direction: column;
-			padding: 20px;
+			justify-content: center;
+			align-items: center;
 			gap: 7px;
 		}
 	}

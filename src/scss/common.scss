@@ -188,6 +188,12 @@
 	cursor: pointer;
 	transition: all 0.3s ease 0s;
 
+	@media (max-width: $mobile) {
+		font-size: 16px;
+		line-height: 142%;
+		gap: 15px;
+	}
+
 	&::after {
 		content: "\e900";
 		@extend %ic;
@@ -246,6 +252,10 @@
 	justify-content: center;
 	align-items: center;
 	gap: 35px;
+
+	@media (max-width: $mobile) {
+		gap: 15px;
+	}
 
 	&__link {
 		@extend .p-normal;
