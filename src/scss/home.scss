@@ -20,6 +20,7 @@
 	// .block-hero__container
 	&__container {
 		display: flex;
+
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
@@ -319,6 +320,7 @@
 
 	// .tour-review__text
 	&__text {
+		flex: 1;
 	}
 
 	// .tour-review__footer
