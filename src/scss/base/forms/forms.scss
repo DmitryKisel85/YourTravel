@@ -61,8 +61,7 @@ textarea.input {
 		}
 	}
 
-	&__input,
-	&__select {
+	&__input {
 		display: flex;
 		align-items: center;
 		height: 68px;
@@ -140,7 +139,7 @@ textarea.input {
 
 // <SELECT>
 // Снипет (HTML): sel
-// @import "select";
+@import "select";
 
 // <RATING>
 // Снипет (HTML): rating

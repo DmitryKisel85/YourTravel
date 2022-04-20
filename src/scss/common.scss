@@ -200,7 +200,9 @@
 		position: relative;
 		display: inline-block;
 		margin-left: 15px;
-		top: 2px;
+		// top: 2px;
+		font-size: 23px;
+		line-height: 122%;
 	}
 
 	@media (any-hover: hover) {

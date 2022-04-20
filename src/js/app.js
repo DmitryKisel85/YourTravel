@@ -88,7 +88,7 @@ import * as flsForms from "./files/forms/forms.js";
 // flsForms.formRating();
 
 /* Модуль работы с select. */
-// import "./libs/select.js";
+import "./libs/select.js";
 
 /* Модуль работы с календарем */
 // import './files/forms/datepicker.js'
