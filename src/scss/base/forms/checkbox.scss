@@ -26,26 +26,23 @@
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		gap: 19px;
+
+		@include adaptiveValue("gap", 19, 10, 1024, 360, 1);
 
 		&:before {
 			content: "";
 			align-self: flex-start;
-			flex: 0 0 25px;
-			width: 25px;
-			height: 25px;
-			border-radius: 5px;
+			flex: 0 0 rem(25);
+			width: rem(25);
+			height: rem(25);
+			border-radius: rem(5);
 			border: 1px solid $mainColor;
 
 			@media (max-width: $mobile) {
-				width: 20px;
-				height: 20px;
-				flex: 0 0 20px;
+				width: rem(20);
+				height: rem(20);
+				flex: 0 0 rem(20);
 			}
-		}
-
-		@media (max-width: $mobile) {
-			gap: 10px;
 		}
 	}
 	// .checkbox__text
@@ -54,7 +51,7 @@
 
 		@media (max-width: $mobile) {
 			font-weight: 400;
-			font-size: 16px;
+			font-size: rem(16);
 			line-height: 142%;
 		}
 

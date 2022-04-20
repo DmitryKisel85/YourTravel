@@ -11,42 +11,46 @@ select {
 	appearance: none;
 }
 
-textarea.input {
-	resize: none;
-	padding: 0px 0px;
-}
-
 .span_all {
 	grid-column: 1 / -1;
 }
 
 .form {
-	padding: 70px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	column-gap: 30px;
-	row-gap: 33px;
 	background-color: $white-clr;
-	border-radius: 50px;
 	overflow: hidden;
+	padding: rem(70);
 
 	@media (max-width: $tablet) {
-		padding: 60px;
-		column-gap: 20px;
+		padding: rem(60);
+	}
+
+	@media (max-width: em(900)) {
+		padding: rem(40);
 	}
 
 	@media (max-width: $mobile) {
+		padding: rem(20);
+	}
+
+	@include adaptiveValue("column-gap", 30, 20, 1920, 1024, 1);
+	@include adaptiveValue("row-gap", 33, 30, 1024, 360, 1);
+	@include adaptiveValue("border-radius", 50, 30, 1024, 360, 1);
+
+	@media (max-width: em(600)) {
 		grid-template-columns: 1fr;
-		padding: 20px 20px 40px 20px;
-		border-radius: 30px;
-		row-gap: 30px;
+	}
+
+	@media (max-width: $mobile) {
+		padding-bottom: rem(40);
 	}
 
 	&__group {
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: 8px;
+		gap: rem(8);
 	}
 
 	&__label {
@@ -54,26 +58,24 @@ textarea.input {
 
 	&__input,
 	&__select,
+	.select__title,
 	&__textarea {
-		border-radius: 10px;
+		color: $mainColor;
+		background-color: $beige-100;
+		border: 1px solid $beige-200;
+		border-radius: rem(10);
 		&:focus {
 			outline: 1px solid $gray-300;
 		}
 	}
 
-	&__input {
+	&__input,
+	.select__title {
 		display: flex;
 		align-items: center;
-		height: 68px;
-		padding: 20px;
-		color: $mainColor;
-		background-color: $beige-100;
-		border: 1px solid $beige-200;
 
-		@media (max-width: $mobile) {
-			padding: 10px;
-			height: 43px;
-		}
+		@include adaptiveValue("padding", 20, 10, 1024, 360, 1);
+		@include adaptiveValue("height", 68, 43, 1024, 360, 1);
 
 		&::placeholder {
 			@extend .p-normal;
@@ -89,15 +91,9 @@ textarea.input {
 	}
 
 	&__textarea {
-		height: 152px;
-		padding: 20px;
-		color: $mainColor;
-		background-color: $beige-100;
-		border: 1px solid $beige-200;
+		padding: rem(20);
 
-		@media (max-width: $mobile) {
-			height: 132px;
-		}
+		@include adaptiveValue("height", 152, 132, 1024, 360, 1);
 	}
 
 	&__bottom-block {
@@ -111,23 +107,11 @@ textarea.input {
 
 	&__btns {
 		display: flex;
-		gap: 30px;
-
-		@media (max-width: $mobile) {
-			gap: 10px;
-		}
+		@include adaptiveValue("gap", 30, 10, 1024, 360, 1);
 	}
 }
 
 //</FORM>
-
-// <BUTTONS>
-// Снипет (HTML): btn
-// @import "button";
-
-// <INPUTS>
-// Снипет (HTML): inp
-// @import "input";
 
 // <CHECK>
 // Снипет (HTML): chk
@@ -140,19 +124,3 @@ textarea.input {
 // <SELECT>
 // Снипет (HTML): sel
 @import "select";
-
-// <RATING>
-// Снипет (HTML): rating
-// @import "rating";
-
-// <QUANTITY>
-// Снипет (HTML): qa
-// @import "quantity";
-
-// <RANGE>
-// Снипет (HTML):
-// @import "range";
-
-// <CALENDAR>
-// Снипет (HTML):
-// @import "datepicker";

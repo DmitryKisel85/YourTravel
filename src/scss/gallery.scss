@@ -1,41 +1,38 @@
 .gallery {
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
-	max-width: 1920px;
+	max-width: rem(1920);
 	margin: 0 auto;
-	padding: 0 30px;
 
-	@media (max-width: $mobile) {
-		gap: 18px;
-		padding: 0 20px;
-	}
+	@include adaptiveValue("padding-left", 30, 20, 1024, 360, 1);
+	@include adaptiveValue("padding-right", 30, 20, 1024, 360, 1);
+	@include adaptiveValue("gap", 30, 18, 1024, 360, 1);
 
+	// .gallery__row
 	&__row {
 		display: flex;
-		gap: 30px;
+		@include adaptiveValue("gap", 30, 18, 1024, 360, 1);
 
-		@media (max-width: $mobile) {
-			gap: 18px;
-		}
-
+		// .gallery__row_4photos
 		&_4photos {
 			@media (max-width: $mobile) {
 				&:last-child {
-					gap: 10px;
+					gap: rem(10);
 				}
 			}
 		}
 
+		// .gallery__row_5photos
 		&_5photos {
 			@media (max-width: $mobile) {
-				gap: 10px;
+				gap: rem(10);
 			}
 		}
 	}
 
+	// .gallery__item
 	&__item {
-		height: 300px;
+		@include adaptiveValue("height", 300, 110, 1024, 360, 1);
 
 		@media (max-width: $tablet) {
 			&:last-child {
@@ -44,23 +41,17 @@
 		}
 
 		@media (max-width: $mobile) {
-			width: 100%;
-			height: 110px;
 			&:nth-last-child(2) {
 				display: none;
 			}
 		}
 	}
-}
 
-.gallery__img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	border-radius: 50px;
-	object-fit: cover;
-
-	@media (max-width: $mobile) {
-		border-radius: 20px;
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		@include adaptiveValue("border-radius", 50, 20, 1024, 360, 1);
 	}
 }

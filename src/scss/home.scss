@@ -1,92 +1,25 @@
 //========================================================================================================================================================
-// HERO SECTION
-
-.hero {
-	height: 831px;
-	background: url("@img/header/header-img.jpg") center / cover no-repeat;
-
-	@media (max-width: $mobile) {
-		height: 488px;
-	}
-
-	&__block {
-		@media (max-width: $mobile) {
-			padding: 52px 0;
-		}
-	}
-}
-
-.block-hero {
-	// .block-hero__container
-	&__container {
-		display: flex;
-
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	// .block-hero__title
-	&__title {
-		margin: 119px 0 0 0;
-		text-align: center;
-		color: $white-clr;
-
-		@media (max-width: $mobile) {
-			margin-top: 0;
-		}
-	}
-
-	// .block-hero__text
-	&__text {
-		max-width: 562px;
-		margin: 50px 0;
-		color: $white-clr;
-		text-align: center;
-
-		@media (max-width: $tablet) {
-			max-width: 442px;
-		}
-
-		@media (max-width: $mobile) {
-			max-width: 310px;
-			margin: 40px 0;
-		}
-	}
-
-	// .block-hero__btn
-	&__btn {
-	}
-}
-
-//====================================================================================================
-// MAIN BLOCK
+// MAIN BLOCK for all sections, except HEADER, HERO, FOOTER
 
 .main {
 	background-color: $beige-100;
-
-	&__block {
-		margin: 135px 0;
-
-		@media (max-width: $mobile) {
-			margin: 75px 0;
-		}
-	}
 
 	// .main__container
 	&__container {
 	}
 
+	// .main__block
+	&__block {
+		@include adaptiveValue("margin-top", 135, 75, 1024, 360, 1);
+		@include adaptiveValue("margin-bottom", 135, 75, 1024, 360, 1);
+	}
+
 	// .main__header
 	&__header {
-		margin-bottom: 100px;
+		@include adaptiveValue("margin-bottom", 100, 40, 1024, 360, 1);
 
-		@media (max-width: $mobile) {
-			margin-bottom: 40px;
-
-			.tour-choose & {
-				margin-bottom: 50px;
-			}
+		.tour-choose & {
+			@include adaptiveValue("margin-bottom", 100, 50, 1024, 360, 1);
 		}
 	}
 }
@@ -99,19 +32,11 @@
 
 	// .main-block-header__title
 	&__title {
-		margin-bottom: 30px;
 		text-align: center;
-
-		@media (max-width: $mobile) {
-			margin-bottom: 20px;
-		}
+		@include adaptiveValue("margin-bottom", 30, 20, 1024, 360, 1);
 
 		.tour-choose & {
-			margin-bottom: 35px;
-
-			@media (max-width: $mobile) {
-				margin-bottom: 30px;
-			}
+			@include adaptiveValue("margin-bottom", 35, 30, 1024, 360, 1);
 		}
 	}
 
@@ -121,12 +46,9 @@
 
 	// .main-block-header__text
 	&__text {
-		max-width: 418px;
+		max-width: rem(418);
 		text-align: center;
 		color: $gray-300;
-
-		@media (max-width: $mobile) {
-		}
 	}
 }
 
@@ -135,12 +57,8 @@
 	&__list {
 		display: flex;
 		justify-content: center;
-		gap: 30px;
 		flex-wrap: wrap;
-
-		@media (max-width: $mobile) {
-			gap: 10px;
-		}
+		@include adaptiveValue("gap", 30, 10, 1024, 360, 1);
 	}
 
 	// .main-block-menu__item
@@ -152,8 +70,8 @@
 		&::after {
 			content: "";
 			display: block;
-			margin-top: 3px;
-			border-bottom: 2px solid transparent;
+			margin-top: rem(3);
+			border-bottom: rem(2) solid transparent;
 			width: 100%;
 
 			@media (max-width: $mobile) {
@@ -166,8 +84,8 @@
 				&::after {
 					content: "";
 					display: block;
-					margin-top: 3px;
-					border-bottom: 2px solid $mainColor;
+					margin-top: rem(3);
+					border-bottom: rem(2) solid $mainColor;
 					width: 100%;
 
 					@media (max-width: $mobile) {
@@ -183,8 +101,8 @@
 			&::after {
 				content: "";
 				display: block;
-				margin-top: 3px;
-				border-bottom: 2px solid $orange-200;
+				margin-top: rem(3);
+				border-bottom: rem(2) solid $orange-200;
 				width: 100%;
 
 				@media (max-width: $mobile) {
@@ -192,6 +110,51 @@
 				}
 			}
 		}
+	}
+}
+
+//========================================================================================================================================================
+// HERO SECTION
+
+.hero {
+	background: url("@img/header/header-img.jpg") bottom / cover no-repeat;
+
+	&__block {
+		padding: rem(119) 0;
+
+		@media (max-width: $mobile) {
+			padding: rem(52) 0;
+		}
+	}
+}
+
+.block-hero {
+	// .block-hero__container
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	// .block-hero__title
+	&__title {
+		text-align: center;
+		color: $white-clr;
+	}
+
+	// .block-hero__text
+	&__text {
+		color: $white-clr;
+		text-align: center;
+
+		@include adaptiveValue("max-width", 562, 310, 1920, 360, 1);
+		@include adaptiveValue("margin-top", 50, 40, 1920, 360, 1);
+		@include adaptiveValue("margin-bottom", 50, 40, 1920, 360, 1);
+	}
+
+	// .block-hero__btn
+	&__btn {
 	}
 }
 
@@ -211,15 +174,19 @@
 .items-choose {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 30px;
+
+	@include adaptiveValue("gap", 30, 18, 1920, 1024, 1);
 
 	@media (max-width: $tablet) {
 		grid-template-columns: repeat(2, 1fr);
-		gap: 18px;
+	}
+
+	@media (max-width: em(600)) {
+		grid-template-columns: 1fr;
 	}
 
 	@media (max-width: $mobile) {
-		grid-template-columns: 1fr;
+		// grid-template-columns: 1fr;
 	}
 }
 
@@ -227,12 +194,14 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 50px;
-	border-radius: 50px;
-	height: 531px;
+	// height: 531px;
 	transform: scale(1);
 	transition: all 0.3s ease 0s;
 	color: $white-clr;
+
+	@include adaptiveValue("padding", 50, 25, 1024, 360, 1);
+	@include adaptiveValue("border-radius", 50, 20, 1024, 360, 1);
+	@include adaptiveValue("min-height", 531, 318, 1024, 360, 1);
 
 	@media (any-hover: hover) {
 		&:hover {
@@ -241,19 +210,9 @@
 		}
 	}
 
-	@media (max-width: $mobile) {
-		height: 318px;
-		padding: 25px;
-		border-radius: 20px;
-	}
-
 	// .card-choose__title
 	&__title {
-		margin-bottom: 16px;
-
-		@media (max-width: $mobile) {
-			margin-bottom: 13px;
-		}
+		@include adaptiveValue("margin-bottom", 16, 13, 1024, 360, 1);
 	}
 
 	// .card-choose__price
@@ -293,29 +252,22 @@
 	&__items {
 		display: flex;
 		justify-content: center;
-		gap: 30px;
+		@include adaptiveValue("gap", 30, 18, 1024, 360, 1);
 
 		@media (max-width: $mobile) {
 			flex-direction: column;
-			gap: 18px;
 		}
 	}
-
 	// .tour-review__item
 	&__item {
-		flex: 1 1 50%;
-		border-radius: 50px;
-		padding: 40px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-
+		flex: 1 1 50%;
 		background-color: $beige-200;
 
-		@media (max-width: $mobile) {
-			padding: 20px;
-			border-radius: 20px;
-		}
+		@include adaptiveValue("padding", 40, 20, 1024, 360, 1);
+		@include adaptiveValue("border-radius", 50, 20, 1024, 360, 1);
 	}
 
 	// .tour-review__text
@@ -328,18 +280,15 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
-		padding-top: 70px;
 
-		@media (max-width: $mobile) {
-			padding-top: 40px;
-		}
+		@include adaptiveValue("padding-top", 70, 40, 1024, 360, 1);
 	}
 
 	// .tour-review__description
 	&__description {
 		display: flex;
 		flex-direction: column;
-		gap: 8px;
+		gap: rem(8);
 	}
 
 	// .tour-review__name
@@ -353,15 +302,16 @@
 
 	&__image-block {
 		display: block;
-		width: 75px;
-		height: 75px;
+		width: rem(75);
+		height: rem(75);
 	}
 
 	// .tour-review__image
 	&__image {
 		width: 100%;
 		height: 100%;
-		border-radius: 100px;
+		border-radius: rem(100);
+		object-fit: cover;
 	}
 }
 //========================================================================================================================================================
@@ -372,11 +322,8 @@
 	&__body {
 		display: flex;
 		flex-direction: column;
-		gap: 50px;
 
-		@media (max-width: $mobile) {
-			gap: 20px;
-		}
+		@include adaptiveValue("gap", 50, 20, 1024, 360, 1);
 	}
 
 	// .tour-story__item
@@ -388,17 +335,12 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	min-height: 567px;
-	border-radius: 50px;
-	padding: 60px;
 	transform: scale(1);
 	transition: all 0.3s ease 0s;
 
-	@media (max-width: $mobile) {
-		min-height: 455px;
-		border-radius: 20px;
-		padding: 30px;
-	}
+	@include adaptiveValue("min-height", 567, 455, 1024, 360, 1);
+	@include adaptiveValue("border-radius", 50, 20, 1024, 360, 1);
+	@include adaptiveValue("padding", 60, 30, 1024, 360, 1);
 
 	@media (any-hover: hover) {
 		&:hover {
@@ -414,17 +356,17 @@
 	// .item-story__title
 	&__title {
 		color: $white-clr;
-		margin-bottom: 37px;
+		margin-bottom: rem(37);
 	}
 
 	// .item-story__text
 	&__text {
 		color: $white-clr;
-		max-width: 554px;
-		margin-bottom: 30px;
+		max-width: rem(554);
+		margin-bottom: rem(30);
 
 		@media (max-width: $mobile) {
-			font-size: 16px;
+			font-size: rem(16);
 			line-height: 142%;
 		}
 	}
@@ -433,7 +375,7 @@
 	&__list {
 		position: relative;
 		margin-top: -10px;
-		margin-left: 32px;
+		margin-left: rem(32);
 		flex: 1 1 auto;
 		color: $white-clr;
 	}
@@ -479,7 +421,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 30px;
+	gap: rem(30);
 
 	@media (max-width: $mobile) {
 		flex-direction: column;
@@ -487,11 +429,7 @@
 
 	// .block-final__img
 	&__img {
-		max-width: 370px;
-
-		@media (max-width: $mobile) {
-			max-width: 130px;
-		}
+		@include adaptiveValue("max-width", 370, 130, 1024, 360, 1);
 
 		img {
 			border-radius: 50px;
@@ -499,9 +437,7 @@
 			height: auto;
 			object-fit: cover;
 
-			@media (max-width: $mobile) {
-				border-radius: 20px;
-			}
+			@include adaptiveValue("border-radius", 50, 20, 1024, 360, 1);
 		}
 	}
 
@@ -509,12 +445,12 @@
 	&__body {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
-		max-width: 371px;
+		gap: rem(20);
+
+		@include adaptiveValue("max-width", 371, 291, 1024, 360, 1);
 
 		@media (max-width: $mobile) {
 			text-align: center;
-			max-width: 291px;
 		}
 	}
 

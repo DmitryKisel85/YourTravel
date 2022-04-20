@@ -9,31 +9,7 @@
 	}
 	// .select__title
 	&__title {
-		display: flex;
-		align-items: center;
-		height: 68px;
-		padding: 20px;
 		width: 100%;
-		color: $mainColor;
-		background-color: $beige-100;
-		border: 1px solid $beige-200;
-		border-radius: 10px;
-
-		&:focus {
-			outline: 1px solid $gray-300;
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: $beige-200;
-				cursor: pointer;
-			}
-		}
-
-		@media (max-width: $mobile) {
-			height: 43px;
-			padding: 10px;
-		}
 	}
 	// .select__value
 	&__value {
@@ -41,9 +17,6 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		// height: rem(30);
-		// padding: 0 rem(20);
-		// gap: rem(10);
 		@extend .p-normal;
 		color: $gray-300;
 
@@ -51,11 +24,9 @@
 			content: "";
 			background: url("@img/form-icons/ic-dropdown.svg") center / cover no-repeat;
 			align-self: stretch;
-			flex: 0 0 24px;
+			flex: 0 0 rem(24);
 			transition: all 0.3s ease 0s;
 			display: flex;
-			// justify-content: center;
-			// align-items: center;
 
 			@media (max-width: $mobile) {
 				background: url("@img/form-icons/ic-dropdown.svg") right 1px bottom 1px / cover no-repeat;
@@ -86,22 +57,22 @@
 		color: #000;
 		position: absolute;
 		// top: 29px;
-		top: 68px;
-		border-radius: 0 0 4px 4px;
+		top: rem(68);
+		border-radius: 0 0 rem(4) rem(4);
 		min-width: 100%;
 		left: 0;
 		background-color: $beige-100;
 		border-top: 0;
 		border: 1px solid $beige-200;
 		border-top: 0;
-		padding: 10px 0px 5px 0px;
+		padding: rem(10) 0px rem(5) 0px;
 	}
 	// .select__scroll
 	&__scroll {
 		overflow-y: auto;
 		overflow-x: hidden;
 		// Максимальная высота
-		max-height: 200px;
+		max-height: rem(200);
 		// Стили скроллбара
 		.simplebar-scrollbar {
 			&::before {
@@ -114,7 +85,7 @@
 		width: 100%;
 		text-align: left;
 		cursor: pointer;
-		padding: 5px 15px;
+		padding: rem(5) rem(15);
 		color: inherit;
 		&._select-selected {
 			background-color: #eee;

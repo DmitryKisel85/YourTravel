@@ -53,7 +53,7 @@ $maxWidth: 1920;
 $maxWidthContainer: 1170;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
-$containerPadding: 30;
+$containerPadding: 0;
 
 // Ширина срабатывания первого брейкпоинта
 $containerWidth: $maxWidthContainer + $containerPadding;
@@ -61,13 +61,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 // Брейк-поинты
 $pc: em($maxWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
 $tablet: em(1024); // Планшеты, некоторые телефоны в горизонтальном положении
-$mobile: em(360); // Телефоны L
-// $mobileSmall: em(479.98); // Телефоны S
-
-// Тип адаптива:
-// 1 = отзывчивость (у контейнера нет брейкпоинтов),
-// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
-$responsiveType: 2;
+$mobile: em(360); // Телефоны
 
 // ============================================================================================================================================================================================================================================================================================================================================================================================
 // ============================================================================================================================================================================================================================================================================================================================================================================================
@@ -111,39 +105,21 @@ body {
 Например header__container, main__container и т.д.
 Снипет (HTML): cnt
 */
-@if ($responsiveType==1) {
-	// Отзывчивая
-	[class*="__container"] {
-		@if ($maxWidthContainer>0) {
-			max-width: rem($maxWidthContainer);
-			box-sizing: content-box;
-			margin: 0 auto;
-		}
-		@if ($containerPadding>0) {
-			padding: 0 rem(math.div($containerPadding, 2));
-		}
+
+[class*="__container"] {
+	margin: 0 auto;
+	max-width: rem(1200);
+	padding: 0 rem(15);
+
+	@media (max-width: $pc) {
+		max-width: rem(1200);
 	}
-} @else {
-	// По брейк-поинтам
-	[class*="__container"] {
-		margin: 0 auto;
-		@if ($maxWidthContainer>0) {
-			max-width: rem($maxWidthContainer);
-			box-sizing: content-box;
-		} @else {
-			@if ($containerPadding>0) {
-				padding: 0 rem(math.div($containerPadding, 2));
-			}
-		}
-		@media (max-width: $pc) {
-			max-width: rem(1170);
-		}
-		@media (max-width: $tablet) {
-			max-width: rem(918);
-		}
-		@media (max-width: $mobile) {
-			max-width: rem(318);
-		}
+	@media (max-width: $tablet) {
+		max-width: rem(948);
+	}
+	@media (max-width: $mobile) {
+		max-width: rem(348);
+		padding: 0 rem(10);
 	}
 }
 
@@ -151,7 +127,7 @@ body {
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "base";
 
-// Подключение стилей общих элементов проекта
+// Подключение стилей общих элементов проекта, типография, кнопки
 @import "common";
 
 // Подключение стилей отдельных блоков
@@ -160,5 +136,4 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
-
 @import "gallery";

@@ -1,13 +1,13 @@
 .radio-form {
 	&__text {
-		margin-bottom: 8px;
+		margin-bottom: rem(8);
 	}
 }
 
 .options {
 	display: flex;
 	align-items: center;
-	gap: 31px;
+	gap: rem(31);
 
 	// .options__item
 	&__item {
@@ -35,37 +35,37 @@
 		align-items: center;
 		justify-content: center;
 		cursor: pointer;
-		gap: 11px;
+		gap: rem(11);
 		&:before {
 			content: "";
 			align-self: flex-start;
-			width: 26px;
-			height: 26px;
-			flex: 0 0 26px;
+			width: rem(26);
+			height: rem(26);
+			flex: 0 0 rem(26);
 			border-radius: 50%;
 			border: 1px solid $mainColor;
 
 			@media (max-width: $mobile) {
-				width: 20px;
-				height: 20px;
-				flex: 0 0 20px;
+				width: rem(20);
+				height: rem(20);
+				flex: 0 0 rem(20);
 			}
 		}
 		&:after {
 			content: "";
 			transition: all 0.3s ease 0s;
 			transform: scale(0);
-			width: 10px;
-			height: 10px;
+			width: rem(10);
+			height: rem(10);
 			border-radius: 50%;
 			background-color: $mainColor;
 			position: absolute;
-			left: 8px;
-			top: 8px;
+			left: rem(8);
+			top: rem(8);
 
 			@media (max-width: $mobile) {
-				left: 5px;
-				top: 5px;
+				left: rem(5);
+				top: rem(5);
 			}
 		}
 	}

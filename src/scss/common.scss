@@ -3,24 +3,24 @@
 
 .h1 {
 	font-weight: 700;
-	font-size: 96px;
 	line-height: 109%;
 	letter-spacing: 0.02em;
 
+	@include adaptiveValue("font-size", 96, 34, 1024, 360, 1);
+
 	@media (max-width: $mobile) {
-		font-size: 34px;
 		line-height: 112%;
 	}
 }
 
 .h2 {
 	font-weight: 700;
-	font-size: 59px;
 	line-height: 124%;
 	text-align: center;
 
+	@include adaptiveValue("font-size", 59, 34, 1024, 360, 1);
+
 	@media (max-width: $mobile) {
-		font-size: 34px;
 		line-height: 112%;
 		letter-spacing: 0.02em;
 	}
@@ -28,88 +28,76 @@
 
 .h3 {
 	font-weight: 500;
-	font-size: 35px;
+	// font-size: 35px;
 	line-height: 122%;
+
+	@include adaptiveValue("font-size", 35, 23, 1024, 360, 1);
 
 	@media (max-width: $mobile) {
 		font-weight: 700;
-		font-size: 23px;
+		// font-size: 23px;
 		line-height: 120%;
 		letter-spacing: 0.04em;
 	}
 }
 
-// .m-h1 {
-// 	font-weight: 700;
-// 	font-size: 34px;
-// 	line-height: 112%;
-// 	letter-spacing: 0.02em;
-// }
-
-// .m-h2 {
-// 	font-weight: 700;
-// 	font-size: 34px;
-// 	line-height: 112%;
-// 	letter-spacing: 0.02em;
-// }
-
-// .m-h3 {
-// 	font-weight: 700;
-// 	font-size: 23px;
-// 	line-height: 120%;
-// 	letter-spacing: 0.04em;
-// }
-
 //========================================================================================================================================================
 
 .p-big {
 	font-weight: 700;
-	font-size: 23px;
+	// font-size: 23px;
 	line-height: 122%;
 
+	@include adaptiveValue("font-size", 23, 16, 1024, 360, 1);
+
 	@media (max-width: $mobile) {
-		font-size: 16px;
+		// font-size: 16px;
 		line-height: 142%;
 	}
 }
 
 .p-normal {
 	font-weight: 400;
-	font-size: 20px;
+	// font-size: 20px;
 	line-height: 142%;
 
+	@include adaptiveValue("font-size", 20, 16, 1024, 360, 1);
+
 	@media (max-width: $mobile) {
-		font-size: 16px;
+		// font-size: 16px;
 	}
 }
 
 .p-small {
 	font-weight: 400;
-	font-size: 17px;
+	// font-size: 17px;
 	line-height: 142%;
 	letter-spacing: -0.01em;
 
+	@include adaptiveValue("font-size", 17, 16, 1024, 360, 1);
+
 	@media (max-width: $mobile) {
-		font-size: 16px;
+		// font-size: 16px;
 	}
+}
+
+.m-p-big,
+.m-p-normal,
+.m-p-small {
+	font-size: rem(16);
+	line-height: 142%;
 }
 
 .m-p-big {
 	font-weight: 700;
-	font-size: 16px;
-	line-height: 142%;
 }
 
 .m-p-normal {
 	font-weight: 400;
-	font-size: 16px;
-	line-height: 142%;
 }
 
 .m-p-small {
 	font-weight: 400;
-	font-size: 16px;
-	line-height: 142%;
 	letter-spacing: -0.01em;
 }
 //========================================================================================================================================================
@@ -118,8 +106,8 @@
 .btn {
 	&_findtour-hero {
 		@extend .p-small;
-		padding: 5px 20px;
-		border-radius: 10px;
+		padding: rem(5) rem(20);
+		border-radius: rem(10);
 		color: $mainColor;
 		background-color: $white-clr;
 		transition: all 0.3s ease 0s;
@@ -139,13 +127,14 @@
 .btn-form {
 	@extend .p-normal;
 
-	padding: 15px 71px;
-	border-radius: 10px;
-	transition: all 0.3s ease 0s;
+	padding-top: rem(15);
+	padding-bottom: rem(15);
 
-	@media (max-width: $mobile) {
-		padding: 15px 30px;
-	}
+	@include adaptiveValue("padding-left", 71, 30, 1024, 360, 1);
+	@include adaptiveValue("padding-right", 71, 30, 1024, 360, 1);
+
+	border-radius: rem(10);
+	transition: all 0.3s ease 0s;
 
 	&_submit {
 		color: $white-clr;
@@ -179,6 +168,8 @@
 }
 
 //========================================================================================================================================================
+// LINKS
+
 .more-link {
 	@extend .p-big;
 	display: flex;
@@ -187,11 +178,13 @@
 	color: $white-clr;
 	cursor: pointer;
 	transition: all 0.3s ease 0s;
+	padding: rem(7) rem(20);
+	margin: rem(-7) rem(-20);
 
 	@media (max-width: $mobile) {
-		font-size: 16px;
+		font-size: rem(16);
 		line-height: 142%;
-		gap: 15px;
+		gap: rem(15);
 	}
 
 	&::after {
@@ -199,16 +192,14 @@
 		@extend %ic;
 		position: relative;
 		display: inline-block;
-		margin-left: 15px;
+		margin-left: rem(15);
 		// top: 2px;
-		font-size: 23px;
+		font-size: rem(23);
 		line-height: 122%;
 	}
 
 	@media (any-hover: hover) {
 		&:hover {
-			padding: 7px 20px;
-			margin: -7px -20px;
 			background-color: $green-400;
 		}
 
@@ -220,17 +211,15 @@
 
 //
 //========================================================================================================================================================
-
+// SOCIAL ICONS
 .social {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 35px;
 
-	@media (max-width: $mobile) {
-		gap: 15px;
-	}
+	@include adaptiveValue("gap", 35, 15, 1024, 360, 1);
 
+	//.social__link
 	&__link {
 		@extend .p-normal;
 		transition: all 0.3s ease 0s;
@@ -253,12 +242,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 35px;
 
-	@media (max-width: $mobile) {
-		gap: 15px;
-	}
+	@include adaptiveValue("gap", 35, 15, 1024, 360, 1);
 
+	//.social-with-icons__link
 	&__link {
 		@extend .p-normal;
 		transition: all 0.3s ease 0s;
@@ -269,12 +256,9 @@
 			@extend .p-normal;
 			position: relative;
 			display: inline-block;
-			margin-right: 10px;
 			color: $gray-300;
 
-			@media (max-width: $mobile) {
-				margin-right: 5px;
-			}
+			@include adaptiveValue("margin-right", 10, 5, 1024, 360, 1);
 		}
 
 		@media (any-hover: hover) {
