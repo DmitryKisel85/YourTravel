@@ -2,7 +2,7 @@
 	// height: rem(88);
 	color: $white-clr;
 
-	.header.header-scroll &._header-scroll {
+	&._header-scroll {
 		position: fixed;
 		width: 100%;
 		top: 0;
