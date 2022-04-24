@@ -82,11 +82,9 @@ select {
 			color: $gray-300;
 		}
 
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: $beige-200;
-				cursor: pointer;
-			}
+		@include on-hover {
+			background-color: $beige-200;
+			cursor: pointer;
 		}
 	}
 

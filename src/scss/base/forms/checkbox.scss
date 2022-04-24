@@ -62,10 +62,8 @@
 				color: $green-400;
 			}
 
-			@media (any-hover: hover) {
-				&:hover {
-					text-decoration: underline;
-				}
+			@include on-hover {
+				text-decoration: underline;
 			}
 		}
 	}

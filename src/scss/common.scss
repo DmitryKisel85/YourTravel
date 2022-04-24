@@ -39,8 +39,6 @@
 	}
 }
 
-//========================================================================================================================================================
-
 .p-big {
 	font-weight: 700;
 	line-height: 122%;
@@ -157,12 +155,12 @@
 	@extend .p-big;
 	display: flex;
 	align-items: center;
-	border-radius: 50px;
-	color: $white-clr;
-	cursor: pointer;
-	transition: all 0.3s ease;
 	padding: rem(7) rem(20);
 	margin: rem(-7) rem(-20);
+	border-radius: rem(50);
+	cursor: pointer;
+	color: $white-clr;
+	transition: all 0.3s ease;
 	z-index: 2;
 
 	@media (max-width: $mobile) {
@@ -177,7 +175,6 @@
 		position: relative;
 		display: inline-block;
 		margin-left: rem(15);
-		// top: 2px;
 		font-size: rem(23);
 		line-height: 122%;
 	}
@@ -239,10 +236,10 @@
 
 		&::before {
 			@extend .p-normal;
+			@extend %ic;
 			position: relative;
 			display: inline-block;
 			color: $gray-300;
-			@extend %ic;
 			font-size: rem(26);
 
 			@include adaptiveValue("margin-right", 10, 5, 1024, 360, 1);
@@ -260,8 +257,6 @@
 				height: 1px;
 				background-color: transparent;
 			}
-
-			// border-bottom: 1px solid transparent;
 		}
 
 		@include on-hover {
