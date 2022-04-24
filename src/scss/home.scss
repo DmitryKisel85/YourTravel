@@ -216,12 +216,6 @@
 		background-size: 120%;
 	}
 
-	// @media (any-hover: hover) {
-	// 	&:hover {
-	// 		background-size: 120%;
-	// 	}
-	// }
-
 	// .card-choose__title
 	&__title {
 		@include adaptiveValue("margin-bottom", 16, 13, 1024, 360, 1);
@@ -370,10 +364,6 @@
 	@include on-hover {
 		background-size: 120%;
 	}
-	// @media (any-hover: hover) {
-	// 	&:hover {
-	// 	}
-	// }
 
 	// .item-story__body
 	&__body {
@@ -498,12 +488,6 @@
 		@include on-hover {
 			text-decoration: underline;
 		}
-
-		// @media (any-hover: hover) {
-		// 	&:hover {
-		// text-decoration: underline;
-		// 	}
-		// }
 
 		&:active {
 			color: $green-400;
