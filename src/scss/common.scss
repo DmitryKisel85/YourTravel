@@ -43,40 +43,28 @@
 
 .p-big {
 	font-weight: 700;
-	// font-size: 23px;
 	line-height: 122%;
 
 	@include adaptiveValue("font-size", 23, 16, 1024, 360, 1);
 
 	@media (max-width: $mobile) {
-		// font-size: 16px;
 		line-height: 142%;
 	}
 }
 
 .p-normal {
 	font-weight: 400;
-	// font-size: 20px;
 	line-height: 142%;
 
 	@include adaptiveValue("font-size", 20, 16, 1024, 360, 1);
-
-	@media (max-width: $mobile) {
-		// font-size: 16px;
-	}
 }
 
 .p-small {
 	font-weight: 400;
-	// font-size: 17px;
 	line-height: 142%;
 	letter-spacing: -0.01em;
 
 	@include adaptiveValue("font-size", 17, 16, 1024, 360, 1);
-
-	@media (max-width: $mobile) {
-		// font-size: 16px;
-	}
 }
 
 .m-p-big,
@@ -195,10 +183,10 @@
 
 	@include on-hover {
 		background-color: $green-400;
-	}
 
-	&:active {
-		background-color: $orange-200;
+		&:active {
+			background-color: $orange-200;
+		}
 	}
 }
 
