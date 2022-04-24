@@ -110,10 +110,15 @@
 		background-color: $white-clr;
 		transition: all 0.3s ease 0s;
 
-		&:hover {
+		@include on-hover {
 			color: $white-clr;
 			background-color: $orange-200;
 		}
+
+		// &:hover {
+		// 	color: $white-clr;
+		// 	background-color: $orange-200;
+		// }
 
 		&:active {
 			color: $mainColor;
@@ -139,11 +144,15 @@
 		color: $white-clr;
 		background-color: $green-400;
 
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: $green-300;
-			}
+		@include on-hover {
+			background-color: $green-300;
 		}
+
+		// @media (any-hover: hover) {
+		// 	&:hover {
+		// 		background-color: $green-300;
+		// 	}
+		// }
 
 		&:active {
 			background-color: $green-200;
@@ -154,11 +163,15 @@
 		color: $green-400;
 		background-color: $green-100;
 
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: $gray-100;
-			}
+		@include on-hover {
+			background-color: $gray-100;
 		}
+
+		// @media (any-hover: hover) {
+		// 	&:hover {
+		// 		background-color: $gray-100;
+		// 	}
+		// }
 
 		&:active {
 			background-color: $gray-200;
@@ -197,15 +210,23 @@
 		line-height: 122%;
 	}
 
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: $green-400;
-		}
+	@include on-hover {
+		background-color: $green-400;
 
 		&:active {
 			background-color: $orange-200;
 		}
 	}
+
+	// @media (any-hover: hover) {
+	// 	&:hover {
+	// 		background-color: $green-400;
+	// 	}
+
+	// 	&:active {
+	// 		background-color: $orange-200;
+	// 	}
+	// }
 }
 
 //
@@ -223,13 +244,19 @@
 		@extend .p-normal;
 		transition: all 0.3s ease 0s;
 
-		@media (any-hover: hover) {
-			&:hover {
-				span {
-					border-bottom: 1px solid $white-clr;
-				}
+		@include on-hover {
+			span {
+				border-bottom: 1px solid $white-clr;
 			}
 		}
+
+		// @media (any-hover: hover) {
+		// 	&:hover {
+		// 		span {
+		// 			border-bottom: 1px solid $white-clr;
+		// 		}
+		// 	}
+		// }
 
 		&:active {
 			color: $orange-200;
@@ -278,21 +305,35 @@
 			// border-bottom: 1px solid transparent;
 		}
 
-		@media (any-hover: hover) {
-			&:hover {
-				span {
-					&::before {
-						content: "";
-						position: absolute;
-						bottom: 1px;
-						left: 0;
-						width: 100%;
-						height: 1px;
-						background-color: black;
-					}
+		@include on-hover {
+			span {
+				&::before {
+					content: "";
+					position: absolute;
+					bottom: 1px;
+					left: 0;
+					width: 100%;
+					height: 1px;
+					background-color: black;
 				}
 			}
 		}
+
+		// @media (any-hover: hover) {
+		// 	&:hover {
+		// 		span {
+		// 			&::before {
+		// 				content: "";
+		// 				position: absolute;
+		// 				bottom: 1px;
+		// 				left: 0;
+		// 				width: 100%;
+		// 				height: 1px;
+		// 				background-color: black;
+		// 			}
+		// 		}
+		// 	}
+		// }
 
 		&:active {
 			color: $orange-200;

@@ -64,13 +64,8 @@
 	&__contacts {
 		border-bottom: 1px solid transparent;
 
-		@media (any-hover: hover) {
-			&:hover {
-				border-bottom: 1px solid $white-clr;
-			}
-		}
-
-		@media (max-width: $mobile) {
+		@include on-hover {
+			border-bottom: 1px solid $white-clr;
 		}
 	}
 }
@@ -100,12 +95,8 @@
 
 	// .menu-header__link
 	&__link {
-		@media (any-hover: hover) {
-			&:hover {
-				// text-decoration: underline;
-
-				border-bottom: 1px solid $white-clr;
-			}
+		@include on-hover {
+			border-bottom: 1px solid $white-clr;
 		}
 	}
 }

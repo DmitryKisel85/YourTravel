@@ -79,18 +79,16 @@
 			}
 		}
 
-		@media (any-hover: hover) {
-			&:hover {
-				&::after {
-					content: "";
-					display: block;
-					margin-top: rem(3);
-					border-bottom: rem(2) solid $mainColor;
-					width: 100%;
+		@include on-hover {
+			&::after {
+				content: "";
+				display: block;
+				margin-top: rem(3);
+				border-bottom: rem(2) solid $mainColor;
+				width: 100%;
 
-					@media (max-width: $mobile) {
-						margin-top: 0;
-					}
+				@media (max-width: $mobile) {
+					margin-top: 0;
 				}
 			}
 		}
@@ -110,7 +108,7 @@
 				}
 			}
 
-			&:hover {
+			@include on-hover {
 				&::after {
 					content: "";
 					display: block;
@@ -369,11 +367,13 @@
 	@include adaptiveValue("border-radius", 50, 20, 1024, 360, 1);
 	@include adaptiveValue("padding", 60, 30, 1024, 360, 1);
 
-	@media (any-hover: hover) {
-		&:hover {
-			background-size: 120%;
-		}
+	@include on-hover {
+		background-size: 120%;
 	}
+	// @media (any-hover: hover) {
+	// 	&:hover {
+	// 	}
+	// }
 
 	// .item-story__body
 	&__body {
@@ -495,11 +495,15 @@
 	&__link {
 		color: $mainColor;
 
-		@media (any-hover: hover) {
-			&:hover {
-				text-decoration: underline;
-			}
+		@include on-hover {
+			text-decoration: underline;
 		}
+
+		// @media (any-hover: hover) {
+		// 	&:hover {
+		// text-decoration: underline;
+		// 	}
+		// }
 
 		&:active {
 			color: $green-400;
