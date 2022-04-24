@@ -62,6 +62,15 @@
 
 	// .header__contacts
 	&__contacts {
+		border-bottom: 1px solid transparent;
+
+		@media (any-hover: hover) {
+			&:hover {
+				// text-decoration: underline;
+
+				border-bottom: 1px solid $white-clr;
+			}
+		}
 	}
 }
 
@@ -92,7 +101,9 @@
 	&__link {
 		@media (any-hover: hover) {
 			&:hover {
-				text-decoration: underline;
+				// text-decoration: underline;
+
+				border-bottom: 1px solid $white-clr;
 			}
 		}
 	}

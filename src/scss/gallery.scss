@@ -11,6 +11,8 @@
 	// .gallery__row
 	&__row {
 		display: flex;
+		@include adaptiveValue("height", 300, 110, 1024, 360, 1);
+
 		@include adaptiveValue("gap", 30, 18, 1024, 360, 1);
 
 		// .gallery__row_4photos
@@ -32,7 +34,7 @@
 
 	// .gallery__item
 	&__item {
-		@include adaptiveValue("height", 300, 110, 1024, 360, 1);
+		// @include adaptiveValue("height", 300, 110, 1024, 360, 1);
 
 		@media (max-width: $tablet) {
 			&:last-child {
@@ -49,9 +51,12 @@
 
 	&__img {
 		display: block;
-		width: 100%;
+
+		max-width: 100%;
 		height: 100%;
+
 		object-fit: cover;
+
 		@include adaptiveValue("border-radius", 50, 20, 1024, 360, 1);
 	}
 }

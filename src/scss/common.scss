@@ -28,14 +28,12 @@
 
 .h3 {
 	font-weight: 500;
-	// font-size: 35px;
 	line-height: 122%;
 
 	@include adaptiveValue("font-size", 35, 23, 1024, 360, 1);
 
 	@media (max-width: $mobile) {
 		font-weight: 700;
-		// font-size: 23px;
 		line-height: 120%;
 		letter-spacing: 0.04em;
 	}
@@ -135,6 +133,7 @@
 
 	border-radius: rem(10);
 	transition: all 0.3s ease 0s;
+	cursor: pointer;
 
 	&_submit {
 		color: $white-clr;
@@ -177,7 +176,7 @@
 	border-radius: 50px;
 	color: $white-clr;
 	cursor: pointer;
-	transition: all 0.3s ease 0s;
+	transition: all 0.3s ease;
 	padding: rem(7) rem(20);
 	margin: rem(-7) rem(-20);
 
@@ -227,7 +226,7 @@
 		@media (any-hover: hover) {
 			&:hover {
 				span {
-					text-decoration: underline;
+					border-bottom: 1px solid $white-clr;
 				}
 			}
 		}
@@ -257,14 +256,40 @@
 			position: relative;
 			display: inline-block;
 			color: $gray-300;
+			@extend %ic;
+			font-size: rem(26);
 
 			@include adaptiveValue("margin-right", 10, 5, 1024, 360, 1);
+		}
+
+		span {
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				bottom: 1px;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: transparent;
+			}
+
+			// border-bottom: 1px solid transparent;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
 				span {
-					text-decoration: underline;
+					&::before {
+						content: "";
+						position: absolute;
+						bottom: 1px;
+						left: 0;
+						width: 100%;
+						height: 1px;
+						background-color: black;
+					}
 				}
 			}
 		}

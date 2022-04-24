@@ -91,6 +91,7 @@ select {
 	}
 
 	&__textarea {
+		resize: none;
 		padding: rem(20);
 
 		@include adaptiveValue("height", 152, 132, 1024, 360, 1);
@@ -108,6 +109,11 @@ select {
 	&__btns {
 		display: flex;
 		@include adaptiveValue("gap", 30, 10, 1024, 360, 1);
+	}
+
+	&__error {
+		@extend .p-normal;
+		color: red;
 	}
 }
 
