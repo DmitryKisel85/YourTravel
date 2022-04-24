@@ -30,7 +30,7 @@ select {
 		padding: rem(40);
 	}
 
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet-small) {
 		padding: rem(20);
 	}
 
@@ -38,7 +38,7 @@ select {
 	@include adaptiveValue("row-gap", 33, 30, 1024, 360, 1);
 	@include adaptiveValue("border-radius", 50, 30, 1024, 360, 1);
 
-	@media (max-width: em(600)) {
+	@media (max-width: $tablet-small) {
 		grid-template-columns: 1fr;
 	}
 

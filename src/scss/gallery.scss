@@ -6,14 +6,15 @@
 
 	@include adaptiveValue("padding-left", 30, 20, 1024, 360, 1);
 	@include adaptiveValue("padding-right", 30, 20, 1024, 360, 1);
-	@include adaptiveValue("gap", 30, 18, 1024, 360, 1);
+	@include adaptiveValue("gap", 30, 18, 1024, 600, 1);
 
 	// .gallery__row
 	&__row {
 		display: flex;
-		@include adaptiveValue("height", 300, 110, 1024, 360, 1);
+		justify-content: center;
 
-		@include adaptiveValue("gap", 30, 18, 1024, 360, 1);
+		@include adaptiveValue("height", 300, 110, 1024, 600, 1);
+		@include adaptiveValue("gap", 30, 18, 1024, 600, 1);
 
 		// .gallery__row_4photos
 		&_4photos {
@@ -34,15 +35,13 @@
 
 	// .gallery__item
 	&__item {
-		// @include adaptiveValue("height", 300, 110, 1024, 360, 1);
-
 		@media (max-width: $tablet) {
 			&:last-child {
 				display: none;
 			}
 		}
 
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet-small) {
 			&:nth-last-child(2) {
 				display: none;
 			}

@@ -163,6 +163,7 @@
 	transition: all 0.3s ease;
 	padding: rem(7) rem(20);
 	margin: rem(-7) rem(-20);
+	z-index: 2;
 
 	@media (max-width: $mobile) {
 		font-size: rem(16);
@@ -197,6 +198,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 2;
 
 	@include adaptiveValue("gap", 35, 15, 1024, 360, 1);
 

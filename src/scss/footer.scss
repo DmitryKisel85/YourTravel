@@ -10,7 +10,7 @@
 		@include adaptiveValue("padding-top", 30, 20, 1024, 360, 1);
 		@include adaptiveValue("padding-bottom", 30, 20, 1024, 360, 1);
 
-		@media (max-width: em(600)) {
+		@media (max-width: $tablet-small) {
 			flex-direction: column;
 			justify-content: center;
 			gap: rem(7);

@@ -193,7 +193,7 @@
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	@media (max-width: em(600)) {
+	@media (max-width: $tablet-small) {
 		grid-template-columns: 1fr;
 	}
 }
@@ -271,7 +271,7 @@
 		justify-content: center;
 		@include adaptiveValue("gap", 30, 18, 1024, 360, 1);
 
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet-small) {
 			flex-direction: column;
 		}
 	}
@@ -352,21 +352,36 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	transition: all 0.3s ease 0s;
-	background-size: 100%;
-	background-position: bottom;
-	background-repeat: no-repeat;
+	position: relative;
+	overflow: hidden;
 
 	@include adaptiveValue("min-height", 567, 455, 1024, 360, 1);
 	@include adaptiveValue("border-radius", 50, 20, 1024, 360, 1);
 	@include adaptiveValue("padding", 60, 30, 1024, 360, 1);
 
+	// .item-story::before
+	&::before {
+		content: "";
+		transition: all 0.3s ease 0s;
+		background-size: cover;
+		background-position: bottom;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
 	@include on-hover {
-		background-size: 120%;
+		&::before {
+			transform: scale(1.2);
+		}
 	}
 
 	// .item-story__body
 	&__body {
+		z-index: 2;
 	}
 
 	// .item-story__title
@@ -416,19 +431,30 @@
 	&__social {
 		color: $white-clr;
 
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet-small) {
 			display: none;
 		}
 	}
 
+	// .item-story_1
 	&_1 {
-		background-image: $story-gradient, url("@img/story-block/story_photo-1.jpg");
+		&::before {
+			background-image: $story-gradient, url("@img/story-block/story_photo-1.jpg");
+		}
 	}
+
+	// .item-story_2
 	&_2 {
-		background-image: $story-gradient, url("@img/story-block/story_photo-2.jpg");
+		&::before {
+			background-image: $story-gradient, url("@img/story-block/story_photo-2.jpg");
+		}
 	}
+
+	// .item-story_3
 	&_3 {
-		background-image: $story-gradient, url("@img/story-block/story_photo-3.jpg");
+		&::before {
+			background-image: $story-gradient, url("@img/story-block/story_photo-3.jpg");
+		}
 	}
 }
 
@@ -441,8 +467,9 @@
 	align-items: center;
 	gap: rem(30);
 
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet-small) {
 		flex-direction: column;
+		text-align: center;
 	}
 
 	// .block-final__img

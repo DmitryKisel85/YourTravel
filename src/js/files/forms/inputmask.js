@@ -13,9 +13,17 @@ if (inputMasks.length) {
 }
 
 const inputPhone = document.getElementById("phone");
-const phoneMask = new Inputmask("+ 7 ( 9 9 9 ) - 9 9 9 - 9 9 - 9 9");
+const phoneMask = new Inputmask("+ 7 ( 9 9 9 ) 9 9 9 - 9 9 - 9 9", { showMaskOnHover: false });
 phoneMask.mask(inputPhone);
 
 const inputMail = document.getElementById("email");
-const mailMask = new Inputmask({ alias: "email" });
+const mailMask = new Inputmask({ alias: "email", showMaskOnHover: false });
 mailMask.mask(inputMail);
+
+const inputDateFrom = document.getElementById("date_from");
+const dateFromMask = new Inputmask({ alias: "datetime", inputFormat: "dd.mm.yyyy", showMaskOnHover: false });
+dateFromMask.mask(inputDateFrom);
+
+const inputDateTo = document.getElementById("date_to");
+const dateToMask = new Inputmask({ alias: "datetime", inputFormat: "dd.mm.yyyy", showMaskOnHover: false });
+dateToMask.mask(inputDateTo);
