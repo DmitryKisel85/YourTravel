@@ -214,11 +214,15 @@
 	@include adaptiveValue("border-radius", 50, 20, 1024, 360, 1);
 	@include adaptiveValue("min-height", 531, 318, 1024, 360, 1);
 
-	@media (any-hover: hover) {
-		&:hover {
-			background-size: 120%;
-		}
+	@include on-hover {
+		background-size: 120%;
 	}
+
+	// @media (any-hover: hover) {
+	// 	&:hover {
+	// 		background-size: 120%;
+	// 	}
+	// }
 
 	// .card-choose__title
 	&__title {
