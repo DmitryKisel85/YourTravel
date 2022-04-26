@@ -50,12 +50,9 @@
 
 	&__img {
 		display: block;
-
 		max-width: 100%;
 		height: 100%;
-
-		object-fit: cover;
-
+		object-fit: fill;
 		@include adaptiveValue("border-radius", 50, 20, 1024, 360, 1);
 	}
 }

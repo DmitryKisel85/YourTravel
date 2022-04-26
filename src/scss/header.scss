@@ -37,7 +37,7 @@
 			padding: rem(10);
 		}
 
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet-small) {
 			flex-direction: row;
 			padding: rem(29) rem(20);
 		}
@@ -51,7 +51,7 @@
 			object-fit: cover;
 		}
 
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet-small) {
 			max-width: rem(133);
 		}
 	}
@@ -84,7 +84,7 @@
 			gap: rem(30);
 		}
 
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet-small) {
 			display: none;
 		}
 	}
