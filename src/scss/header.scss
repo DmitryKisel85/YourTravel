@@ -37,10 +37,10 @@
 		// 	padding: rem(10);
 		// }
 
-		@media (max-width: em(900)) {
-			flex-direction: row;
-			padding: rem(29) rem(20);
-		}
+		// @media (max-width: em(900)) {
+		// 	flex-direction: row;
+		// 	padding: rem(29) rem(20);
+		// }
 	}
 
 	// .header__logo
@@ -51,9 +51,7 @@
 			object-fit: cover;
 		}
 
-		@media (max-width: $tablet-small) {
-			max-width: rem(133);
-		}
+		@include adaptiveValue("max-width", 182, 133, 1024, 600, 1);
 	}
 
 	// .header__menu
@@ -84,7 +82,7 @@
 			gap: rem(30);
 		}
 
-		@media (max-width: $tablet-small) {
+		@media (max-width: em(900)) {
 			display: none;
 		}
 	}
