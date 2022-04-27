@@ -35,6 +35,8 @@
 
 	// .gallery__item
 	&__item {
+		flex: 1;
+
 		@media (max-width: $tablet) {
 			&:last-child {
 				display: none;
@@ -48,11 +50,12 @@
 		}
 	}
 
+	// .gallery__img
 	&__img {
-		display: block;
-		max-width: 100%;
+		width: 100%;
 		height: 100%;
-		object-fit: fill;
+		object-fit: cover;
+
 		@include adaptiveValue("border-radius", 50, 20, 1024, 360, 1);
 	}
 }
