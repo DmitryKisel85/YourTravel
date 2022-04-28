@@ -57,5 +57,10 @@
 		object-fit: cover;
 
 		@include adaptiveValue("border-radius", 50, 20, 1024, 360, 1);
+
+		// .gallery__img_positionedIndividually
+		&_positionedIndividually {
+			object-position: center 85%;
+		}
 	}
 }

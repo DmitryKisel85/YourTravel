@@ -1,5 +1,4 @@
 .header {
-	// height: rem(88);
 	color: $white-clr;
 
 	&._header-scroll {
@@ -34,17 +33,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
-		// @media (max-width: em(900)) {
-		// 	flex-direction: column;
-		// 	gap: rem(10);
-		// 	padding: rem(10);
-		// }
-
-		// @media (max-width: em(900)) {
-		// 	flex-direction: row;
-		// 	padding: rem(29) rem(20);
-		// }
 	}
 
 	// .header__logo
