@@ -110,7 +110,8 @@ body {
 [class*="__container"] {
 	margin: 0 auto;
 	max-width: rem(1200);
-	padding: 0 rem(15);
+	padding-left: rem(15);
+	padding-right: rem(15);
 
 	@media (max-width: $pc) {
 		max-width: rem(1200);
@@ -120,7 +121,8 @@ body {
 	}
 	@media (max-width: $mobile) {
 		max-width: rem(338);
-		padding: 0 rem(10);
+		padding-left: rem(10);
+		padding-right: rem(10);
 	}
 }
 
