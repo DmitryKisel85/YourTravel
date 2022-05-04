@@ -4,13 +4,11 @@
 .main {
 	background-color: $beige-100;
 
-	// .main__block
 	&__block {
 		@include adaptiveValue("margin-top", 135, 75, 1024, 360, 1);
 		@include adaptiveValue("margin-bottom", 135, 75, 1024, 360, 1);
 	}
 
-	// .main__header
 	&__header {
 		@include adaptiveValue("margin-bottom", 100, 40, 1024, 360, 1);
 
@@ -26,7 +24,6 @@
 	align-items: center;
 	justify-content: center;
 
-	// .main-block-header__title
 	&__title {
 		text-align: center;
 		@include adaptiveValue("margin-bottom", 30, 20, 1024, 360, 1);
@@ -36,7 +33,6 @@
 		}
 	}
 
-	// .main-block-header__text
 	&__text {
 		max-width: rem(418);
 		text-align: center;
@@ -45,7 +41,7 @@
 }
 
 .main-block-menu {
-	// .main-block-menu__list
+
 	&__list {
 		display: flex;
 		justify-content: center;
@@ -53,7 +49,6 @@
 		@include adaptiveValue("gap", 30, 10, 1024, 360, 1);
 	}
 
-	// .main-block-menu__link
 	&__link {
 		&::after {
 			content: "";
@@ -129,7 +124,7 @@
 }
 
 .block-hero {
-	// .block-hero__container
+
 	&__container {
 		display: flex;
 		flex-direction: column;
@@ -137,13 +132,11 @@
 		align-items: center;
 	}
 
-	// .block-hero__title
 	&__title {
 		text-align: center;
 		color: $white-clr;
 	}
 
-	// .block-hero__text
 	&__text {
 		color: $white-clr;
 		text-align: center;
@@ -190,42 +183,34 @@
 		background-size: 120%;
 	}
 
-	// .card-choose__title
 	&__title {
 		@include adaptiveValue("margin-bottom", 16, 13, 1024, 360, 1);
 	}
 
-	// .card-choose__link
 	&__link {
 		align-self: flex-start;
 	}
 
-	// .card-choose_1
 	&_1 {
 		background-image: $card-gradient, url("@img/choose-tour/card-1.jpg");
 	}
 
-	// .card-choose_2
 	&_2 {
 		background-image: $card-gradient, url("@img/choose-tour/card-2.jpg");
 	}
 
-	// .card-choose_3
 	&_3 {
 		background-image: $card-gradient, url("@img/choose-tour/card-3.jpg");
 	}
 
-	// .card-choose_4
 	&_4 {
 		background-image: $card-gradient, url("@img/choose-tour/card-4.jpg");
 	}
 
-	// .card-choose_5
 	&_5 {
 		background-image: $card-gradient, url("@img/choose-tour/card-5.jpg");
 	}
 
-	// .card-choose_6
 	&_6 {
 		background-image: $card-gradient, url("@img/choose-tour/card-6.jpg");
 	}
@@ -235,7 +220,7 @@
 // REVIEW TOUR
 
 .tour-review {
-	// .tour-review__items
+
 	&__items {
 		display: flex;
 		justify-content: center;
@@ -245,7 +230,7 @@
 			flex-direction: column;
 		}
 	}
-	// .tour-review__item
+
 	&__item {
 		display: flex;
 		flex-direction: column;
@@ -257,12 +242,10 @@
 		@include adaptiveValue("border-radius", 50, 20, 1024, 360, 1);
 	}
 
-	// .tour-review__text
 	&__text {
 		flex: 1;
 	}
 
-	// .tour-review__footer
 	&__footer {
 		display: flex;
 		justify-content: space-between;
@@ -271,14 +254,12 @@
 		@include adaptiveValue("padding-top", 70, 40, 1024, 360, 1);
 	}
 
-	// .tour-review__description
 	&__description {
 		display: flex;
 		flex-direction: column;
 		gap: rem(8);
 	}
 
-	// .tour-review__tour
 	&__tour {
 		color: $gray-300;
 	}
@@ -289,7 +270,6 @@
 		height: rem(75);
 	}
 
-	// .tour-review__image
 	&__image {
 		width: 100%;
 		height: 100%;
@@ -301,7 +281,7 @@
 // STORY BLOCK
 
 .tour-story {
-	// .tour-story__body
+
 	&__body {
 		display: flex;
 		flex-direction: column;
@@ -321,7 +301,7 @@
 	@include adaptiveValue("border-radius", 50, 20, 1024, 360, 1);
 	@include adaptiveValue("padding", 60, 30, 1024, 360, 1);
 
-	// .item-story::before
+
 	&::before {
 		content: "";
 		transition: all 0.3s ease 0s;
@@ -341,18 +321,15 @@
 		}
 	}
 
-	// .item-story__body
 	&__body {
 		z-index: 2;
 	}
 
-	// .item-story__title
 	&__title {
 		color: $white-clr;
 		margin-bottom: rem(37);
 	}
 
-	// .item-story__text
 	&__text {
 		color: $white-clr;
 		max-width: rem(554);
@@ -364,7 +341,7 @@
 		}
 	}
 
-	// .item-story__list
+
 	&__list {
 		position: relative;
 		margin-top: rem(-10);
@@ -373,19 +350,17 @@
 		color: $white-clr;
 	}
 
-	// .item-story__item
+
 	&__item {
 		list-style-type: disc;
 	}
 
-	// .item-story__footer
 	&__footer {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 	}
 
-	// .item-story__social
 	&__social {
 		color: $white-clr;
 
@@ -394,21 +369,18 @@
 		}
 	}
 
-	// .item-story_1
 	&_1 {
 		&::before {
 			background-image: $story-gradient, url("@img/story-block/story_photo-1.jpg");
 		}
 	}
 
-	// .item-story_2
 	&_2 {
 		&::before {
 			background-image: $story-gradient, url("@img/story-block/story_photo-2.jpg");
 		}
 	}
 
-	// .item-story_3
 	&_3 {
 		&::before {
 			background-image: $story-gradient, url("@img/story-block/story_photo-3.jpg");
@@ -430,7 +402,6 @@
 		text-align: center;
 	}
 
-	// .block-final__img
 	&__img {
 		@include adaptiveValue("max-width", 370, 130, 1024, 360, 1);
 
@@ -444,7 +415,6 @@
 		}
 	}
 
-	// .block-final__body
 	&__body {
 		display: flex;
 		flex-direction: column;
@@ -457,12 +427,10 @@
 		}
 	}
 
-	// .block-final__text
 	&__text {
 		color: $gray-300;
 	}
 
-	// .block-final__link
 	&__link {
 		color: $mainColor;
 

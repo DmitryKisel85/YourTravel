@@ -1,17 +1,16 @@
 // <SELECT>
-// Снипет (HTML): sel
+
 .select {
 	position: relative;
 
-	// .select__body
 	&__body {
 		position: relative;
 	}
-	// .select__title
+
 	&__title {
 		width: 100%;
 	}
-	// .select__value
+
 	&__value {
 		width: 100%;
 		display: flex;
@@ -43,7 +42,7 @@
 			}
 		}
 	}
-	// .select__text
+
 	&__text {
 		flex: 1 1 auto;
 	}
@@ -52,7 +51,7 @@
 		background-color: transparent;
 		height: 100%;
 	}
-	// .select__options
+
 	&__options {
 		color: #000;
 		position: absolute;
@@ -67,7 +66,7 @@
 		border-top: 0;
 		padding: rem(10) 0px rem(5) 0px;
 	}
-	// .select__scroll
+
 	&__scroll {
 		overflow-y: auto;
 		overflow-x: hidden;
@@ -80,7 +79,7 @@
 			}
 		}
 	}
-	// .select__option
+
 	&__option {
 		width: 100%;
 		text-align: left;

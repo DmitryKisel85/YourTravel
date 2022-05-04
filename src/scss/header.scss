@@ -10,14 +10,11 @@
 		backdrop-filter: blur(rem(54));
 		z-index: 5;
 
-		// .header.header-scroll .header__container
-		// .header.header-scroll .menu-header__link
 		.header__container,
 		.menu-header__link {
 			color: $mainColor;
 		}
 
-		// .header.header-scroll .header__logo > img
 		.header__logo img {
 			filter: brightness(0%);
 		}
@@ -40,7 +37,6 @@
 		}
 	}
 
-	// .header__container
 	&__container {
 		padding: rem(29) rem(20);
 		display: flex;
@@ -48,7 +44,6 @@
 		align-items: center;
 	}
 
-	// .header__logo
 	&__logo {
 		img {
 			width: 100%;
@@ -60,7 +55,6 @@
 		@include adaptiveValue("height", 31, 22, 1024, 600, 1);
 	}
 
-	// .header__contacts
 	&__contacts {
 		position: relative;
 		transform: translateY(4px);
@@ -75,7 +69,6 @@
 .menu-header {
 	color: $white-clr;
 
-	// .menu-header__list
 	&__list {
 		display: flex;
 		justify-content: center;
@@ -91,7 +84,6 @@
 		}
 	}
 
-	// .menu-header__link
 	&__link {
 		@include on-hover {
 			border-bottom: 1px solid $white-clr;

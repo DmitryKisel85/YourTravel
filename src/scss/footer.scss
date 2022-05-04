@@ -1,7 +1,6 @@
 .footer {
 	background-color: $beige-200;
 
-	//.footer__container
 	&__container {
 		display: flex;
 		justify-content: space-between;
@@ -17,7 +16,6 @@
 		}
 	}
 
-	// .footer__text
 	&__text {
 		display: block;
 		color: $gray-300;
