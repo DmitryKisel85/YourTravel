@@ -25,6 +25,19 @@
 		.header__container {
 			padding: rem(29) rem(20);
 		}
+
+		.menu-header__link {
+			@include on-hover {
+				border-bottom: 1px solid $mainColor;
+			}
+		}
+
+		.header__contacts {
+			border-bottom: 1px solid transparent;
+			@include on-hover {
+				border-bottom: 1px solid $mainColor;
+			}
+		}
 	}
 
 	// .header__container
