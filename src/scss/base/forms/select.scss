@@ -101,24 +101,10 @@
 		display: inline-flex;
 		align-items: center;
 	}
-	&__asset {
-	}
-	&__text {
-	}
 
 	// Состояния селекта
 	&._select-open {
 		z-index: 5;
-	}
-	&._select-disabled {
-	}
-	&._select-active {
-	}
-	&._select-focus {
-	}
-	&._select-multiple {
-	}
-	&._select-checkbox {
 	}
 }
 

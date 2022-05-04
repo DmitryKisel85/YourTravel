@@ -4,10 +4,6 @@
 .main {
 	background-color: $beige-100;
 
-	// .main__container
-	&__container {
-	}
-
 	// .main__block
 	&__block {
 		@include adaptiveValue("margin-top", 135, 75, 1024, 360, 1);
@@ -40,10 +36,6 @@
 		}
 	}
 
-	// .main-block-header__menu
-	&__menu {
-	}
-
 	// .main-block-header__text
 	&__text {
 		max-width: rem(418);
@@ -59,10 +51,6 @@
 		justify-content: center;
 		flex-wrap: wrap;
 		@include adaptiveValue("gap", 30, 10, 1024, 360, 1);
-	}
-
-	// .main-block-menu__item
-	&__item {
 	}
 
 	// .main-block-menu__link
@@ -164,24 +152,10 @@
 		@include adaptiveValue("margin-top", 50, 40, 1920, 360, 1);
 		@include adaptiveValue("margin-bottom", 50, 40, 1920, 360, 1);
 	}
-
-	// .block-hero__btn
-	&__btn {
-	}
 }
 
 //========================================================================================================================================================
 // CHOOSE TOUR BLOCK
-
-.tour-choose {
-	// .tour-choose__items
-	&__items {
-	}
-
-	// .tour-choose__card
-	&__card {
-	}
-}
 
 .items-choose {
 	display: grid;
@@ -219,10 +193,6 @@
 	// .card-choose__title
 	&__title {
 		@include adaptiveValue("margin-bottom", 16, 13, 1024, 360, 1);
-	}
-
-	// .card-choose__price
-	&__price {
 	}
 
 	// .card-choose__link
@@ -308,10 +278,6 @@
 		gap: rem(8);
 	}
 
-	// .tour-review__name
-	&__name {
-	}
-
 	// .tour-review__tour
 	&__tour {
 		color: $gray-300;
@@ -341,10 +307,6 @@
 		flex-direction: column;
 
 		@include adaptiveValue("gap", 50, 20, 1024, 360, 1);
-	}
-
-	// .tour-story__item
-	&__item {
 	}
 }
 
@@ -414,10 +376,6 @@
 	// .item-story__item
 	&__item {
 		list-style-type: disc;
-	}
-
-	// .item-story__link
-	&__link {
 	}
 
 	// .item-story__footer
@@ -497,10 +455,6 @@
 		@media (max-width: $mobile) {
 			text-align: center;
 		}
-	}
-
-	// .block-final__title
-	&__title {
 	}
 
 	// .block-final__text

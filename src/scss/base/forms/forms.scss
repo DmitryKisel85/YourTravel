@@ -53,9 +53,6 @@ select {
 		gap: rem(8);
 	}
 
-	&__label {
-	}
-
 	&__input,
 	&__select,
 	.select__title,
@@ -93,15 +90,6 @@ select {
 		padding: rem(20);
 
 		@include adaptiveValue("height", 152, 132, 1024, 360, 1);
-	}
-
-	&__bottom-block {
-	}
-
-	&__radio {
-	}
-
-	&__checkbox {
 	}
 
 	&__btns {

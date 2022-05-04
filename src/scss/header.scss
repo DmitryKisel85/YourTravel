@@ -47,10 +47,6 @@
 		@include adaptiveValue("height", 31, 22, 1024, 600, 1);
 	}
 
-	// .header__menu
-	&__menu {
-	}
-
 	// .header__contacts
 	&__contacts {
 		position: relative;
@@ -80,10 +76,6 @@
 		@media (max-width: em(767)) {
 			display: none;
 		}
-	}
-
-	// .menu-header__item
-	&__item {
 	}
 
 	// .menu-header__link
